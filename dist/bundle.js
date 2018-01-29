@@ -127,7 +127,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var store = __webpack_require__(/*! ./_shared */ 51)('wks');
-var uid = __webpack_require__(/*! ./_uid */ 32);
+var uid = __webpack_require__(/*! ./_uid */ 33);
 var Symbol = __webpack_require__(/*! ./_global */ 2).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
 
@@ -254,7 +254,7 @@ module.exports = function (it, key) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(/*! ./_object-dp */ 7);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 31);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
 module.exports = __webpack_require__(/*! ./_descriptors */ 6) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
@@ -275,7 +275,7 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 6) ? function (object
 var global = __webpack_require__(/*! ./_global */ 2);
 var hide = __webpack_require__(/*! ./_hide */ 12);
 var has = __webpack_require__(/*! ./_has */ 11);
-var SRC = __webpack_require__(/*! ./_uid */ 32)('src');
+var SRC = __webpack_require__(/*! ./_uid */ 33)('src');
 var TO_STRING = 'toString';
 var $toString = Function[TO_STRING];
 var TPL = ('' + $toString).split(TO_STRING);
@@ -362,7 +362,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var pIE = __webpack_require__(/*! ./_object-pie */ 49);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 31);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 22);
 var has = __webpack_require__(/*! ./_has */ 11);
@@ -628,40 +628,40 @@ module.exports = function (TYPE, $create) {
 "use strict";
 
 if (__webpack_require__(/*! ./_descriptors */ 6)) {
-  var LIBRARY = __webpack_require__(/*! ./_library */ 33);
+  var LIBRARY = __webpack_require__(/*! ./_library */ 34);
   var global = __webpack_require__(/*! ./_global */ 2);
   var fails = __webpack_require__(/*! ./_fails */ 3);
   var $export = __webpack_require__(/*! ./_export */ 0);
   var $typed = __webpack_require__(/*! ./_typed */ 61);
   var $buffer = __webpack_require__(/*! ./_typed-buffer */ 90);
   var ctx = __webpack_require__(/*! ./_ctx */ 18);
-  var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
-  var propertyDesc = __webpack_require__(/*! ./_property-desc */ 31);
+  var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
+  var propertyDesc = __webpack_require__(/*! ./_property-desc */ 32);
   var hide = __webpack_require__(/*! ./_hide */ 12);
-  var redefineAll = __webpack_require__(/*! ./_redefine-all */ 41);
+  var redefineAll = __webpack_require__(/*! ./_redefine-all */ 42);
   var toInteger = __webpack_require__(/*! ./_to-integer */ 24);
   var toLength = __webpack_require__(/*! ./_to-length */ 8);
   var toIndex = __webpack_require__(/*! ./_to-index */ 118);
-  var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 35);
+  var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
   var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 22);
   var has = __webpack_require__(/*! ./_has */ 11);
   var classof = __webpack_require__(/*! ./_classof */ 50);
   var isObject = __webpack_require__(/*! ./_is-object */ 4);
   var toObject = __webpack_require__(/*! ./_to-object */ 9);
   var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ 81);
-  var create = __webpack_require__(/*! ./_object-create */ 36);
+  var create = __webpack_require__(/*! ./_object-create */ 37);
   var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 17);
-  var gOPN = __webpack_require__(/*! ./_object-gopn */ 37).f;
+  var gOPN = __webpack_require__(/*! ./_object-gopn */ 38).f;
   var getIterFn = __webpack_require__(/*! ./core.get-iterator-method */ 83);
-  var uid = __webpack_require__(/*! ./_uid */ 32);
+  var uid = __webpack_require__(/*! ./_uid */ 33);
   var wks = __webpack_require__(/*! ./_wks */ 5);
   var createArrayMethod = __webpack_require__(/*! ./_array-methods */ 26);
   var createArrayIncludes = __webpack_require__(/*! ./_array-includes */ 52);
   var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 59);
   var ArrayIterators = __webpack_require__(/*! ./es6.array.iterator */ 86);
-  var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+  var Iterators = __webpack_require__(/*! ./_iterators */ 45);
   var $iterDetect = __webpack_require__(/*! ./_iter-detect */ 56);
-  var setSpecies = __webpack_require__(/*! ./_set-species */ 38);
+  var setSpecies = __webpack_require__(/*! ./_set-species */ 39);
   var arrayFill = __webpack_require__(/*! ./_array-fill */ 85);
   var arrayCopyWithin = __webpack_require__(/*! ./_array-copy-within */ 108);
   var $DP = __webpack_require__(/*! ./_object-dp */ 7);
@@ -1171,7 +1171,8 @@ module.exports = {
 
 
 /***/ }),
-/* 29 */
+/* 29 */,
+/* 30 */
 /*!***********************************************!*\
   !*** ./node_modules/core-js/modules/_meta.js ***!
   \***********************************************/
@@ -1179,7 +1180,7 @@ module.exports = {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-var META = __webpack_require__(/*! ./_uid */ 32)('meta');
+var META = __webpack_require__(/*! ./_uid */ 33)('meta');
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var has = __webpack_require__(/*! ./_has */ 11);
 var setDesc = __webpack_require__(/*! ./_object-dp */ 7).f;
@@ -1235,7 +1236,7 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/_add-to-unscopables.js ***!
   \*************************************************************/
@@ -1253,7 +1254,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/_property-desc.js ***!
   \********************************************************/
@@ -1272,7 +1273,7 @@ module.exports = function (bitmap, value) {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /*!**********************************************!*\
   !*** ./node_modules/core-js/modules/_uid.js ***!
   \**********************************************/
@@ -1288,7 +1289,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /*!**************************************************!*\
   !*** ./node_modules/core-js/modules/_library.js ***!
   \**************************************************/
@@ -1300,7 +1301,7 @@ module.exports = false;
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_object-keys.js ***!
   \******************************************************/
@@ -1318,7 +1319,7 @@ module.exports = Object.keys || function keys(O) {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_to-absolute-index.js ***!
   \************************************************************/
@@ -1336,7 +1337,7 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /*!********************************************************!*\
   !*** ./node_modules/core-js/modules/_object-create.js ***!
   \********************************************************/
@@ -1388,7 +1389,7 @@ module.exports = Object.create || function create(O, Properties) {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_object-gopn.js ***!
   \******************************************************/
@@ -1406,7 +1407,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_set-species.js ***!
   \******************************************************/
@@ -1431,7 +1432,7 @@ module.exports = function (KEY) {
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_an-instance.js ***!
   \******************************************************/
@@ -1447,7 +1448,7 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_for-of.js ***!
   \*************************************************/
@@ -1483,7 +1484,7 @@ exports.RETURN = RETURN;
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/modules/_redefine-all.js ***!
   \*******************************************************/
@@ -1499,7 +1500,7 @@ module.exports = function (target, src, safe) {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/_set-to-string-tag.js ***!
   \************************************************************/
@@ -1517,7 +1518,7 @@ module.exports = function (it, tag, stat) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /*!******************************************************!*\
   !*** ./node_modules/core-js/modules/_string-trim.js ***!
   \******************************************************/
@@ -1558,7 +1559,7 @@ module.exports = exporter;
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /*!****************************************************!*\
   !*** ./node_modules/core-js/modules/_iterators.js ***!
   \****************************************************/
@@ -1570,7 +1571,7 @@ module.exports = {};
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /*!**************************************************************!*\
   !*** ./node_modules/core-js/modules/_validate-collection.js ***!
   \**************************************************************/
@@ -1586,7 +1587,6 @@ module.exports = function (it, TYPE) {
 
 
 /***/ }),
-/* 46 */,
 /* 47 */,
 /* 48 */
 /*!**************************************************!*\
@@ -1680,7 +1680,7 @@ module.exports = function (key) {
 // true  -> Array#includes
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 35);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -1880,14 +1880,14 @@ module.exports = function (O, D) {
 var global = __webpack_require__(/*! ./_global */ 2);
 var $export = __webpack_require__(/*! ./_export */ 0);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
-var redefineAll = __webpack_require__(/*! ./_redefine-all */ 41);
-var meta = __webpack_require__(/*! ./_meta */ 29);
-var forOf = __webpack_require__(/*! ./_for-of */ 40);
-var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
+var redefineAll = __webpack_require__(/*! ./_redefine-all */ 42);
+var meta = __webpack_require__(/*! ./_meta */ 30);
+var forOf = __webpack_require__(/*! ./_for-of */ 41);
+var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var fails = __webpack_require__(/*! ./_fails */ 3);
 var $iterDetect = __webpack_require__(/*! ./_iter-detect */ 56);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var inheritIfRequired = __webpack_require__(/*! ./_inherit-if-required */ 72);
 
 module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
@@ -1974,7 +1974,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 
 var global = __webpack_require__(/*! ./_global */ 2);
 var hide = __webpack_require__(/*! ./_hide */ 12);
-var uid = __webpack_require__(/*! ./_uid */ 32);
+var uid = __webpack_require__(/*! ./_uid */ 33);
 var TYPED = uid('typed_array');
 var VIEW = uid('view');
 var ABV = !!(global.ArrayBuffer && global.DataView);
@@ -2014,7 +2014,7 @@ module.exports = {
 "use strict";
 
 // Forced replacement prototype accessors methods
-module.exports = __webpack_require__(/*! ./_library */ 33) || !__webpack_require__(/*! ./_fails */ 3)(function () {
+module.exports = __webpack_require__(/*! ./_library */ 34) || !__webpack_require__(/*! ./_fails */ 3)(function () {
   var K = Math.random();
   // In FF throws only define methods
   // eslint-disable-next-line no-undef, no-useless-call
@@ -2062,7 +2062,7 @@ module.exports = function (COLLECTION) {
 var $export = __webpack_require__(/*! ./_export */ 0);
 var aFunction = __webpack_require__(/*! ./_a-function */ 10);
 var ctx = __webpack_require__(/*! ./_ctx */ 18);
-var forOf = __webpack_require__(/*! ./_for-of */ 40);
+var forOf = __webpack_require__(/*! ./_for-of */ 41);
 
 module.exports = function (COLLECTION) {
   $export($export.S, COLLECTION, { from: function from(source /* , mapFn, thisArg */) {
@@ -2116,7 +2116,7 @@ module.exports = function (it) {
 
 var global = __webpack_require__(/*! ./_global */ 2);
 var core = __webpack_require__(/*! ./_core */ 21);
-var LIBRARY = __webpack_require__(/*! ./_library */ 33);
+var LIBRARY = __webpack_require__(/*! ./_library */ 34);
 var wksExt = __webpack_require__(/*! ./_wks-ext */ 93);
 var defineProperty = __webpack_require__(/*! ./_object-dp */ 7).f;
 module.exports = function (name) {
@@ -2135,7 +2135,7 @@ module.exports = function (name) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var shared = __webpack_require__(/*! ./_shared */ 51)('keys');
-var uid = __webpack_require__(/*! ./_uid */ 32);
+var uid = __webpack_require__(/*! ./_uid */ 33);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
@@ -2338,14 +2338,14 @@ module.exports = function (TO_STRING) {
 
 "use strict";
 
-var LIBRARY = __webpack_require__(/*! ./_library */ 33);
+var LIBRARY = __webpack_require__(/*! ./_library */ 34);
 var $export = __webpack_require__(/*! ./_export */ 0);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
 var hide = __webpack_require__(/*! ./_hide */ 12);
 var has = __webpack_require__(/*! ./_has */ 11);
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var $iterCreate = __webpack_require__(/*! ./_iter-create */ 78);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 17);
 var ITERATOR = __webpack_require__(/*! ./_wks */ 5)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
@@ -2420,9 +2420,9 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 "use strict";
 
-var create = __webpack_require__(/*! ./_object-create */ 36);
-var descriptor = __webpack_require__(/*! ./_property-desc */ 31);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var create = __webpack_require__(/*! ./_object-create */ 37);
+var descriptor = __webpack_require__(/*! ./_property-desc */ 32);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
@@ -2486,7 +2486,7 @@ module.exports = function (KEY) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var ITERATOR = __webpack_require__(/*! ./_wks */ 5)('iterator');
 var ArrayProto = Array.prototype;
 
@@ -2507,7 +2507,7 @@ module.exports = function (it) {
 "use strict";
 
 var $defineProperty = __webpack_require__(/*! ./_object-dp */ 7);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 31);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
 
 module.exports = function (object, index, value) {
   if (index in object) $defineProperty.f(object, index, createDesc(0, value));
@@ -2526,7 +2526,7 @@ module.exports = function (object, index, value) {
 
 var classof = __webpack_require__(/*! ./_classof */ 50);
 var ITERATOR = __webpack_require__(/*! ./_wks */ 5)('iterator');
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 module.exports = __webpack_require__(/*! ./_core */ 21).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
     || it['@@iterator']
@@ -2564,7 +2564,7 @@ module.exports = function (original, length) {
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 35);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 module.exports = function fill(value /* , start = 0, end = @length */) {
   var O = toObject(this);
@@ -2589,9 +2589,9 @@ module.exports = function fill(value /* , start = 0, end = @length */) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 30);
+var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 31);
 var step = __webpack_require__(/*! ./_iter-step */ 109);
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 
 // 22.1.3.4 Array.prototype.entries()
@@ -2841,19 +2841,19 @@ module.exports.f = function (C) {
 
 var global = __webpack_require__(/*! ./_global */ 2);
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 6);
-var LIBRARY = __webpack_require__(/*! ./_library */ 33);
+var LIBRARY = __webpack_require__(/*! ./_library */ 34);
 var $typed = __webpack_require__(/*! ./_typed */ 61);
 var hide = __webpack_require__(/*! ./_hide */ 12);
-var redefineAll = __webpack_require__(/*! ./_redefine-all */ 41);
+var redefineAll = __webpack_require__(/*! ./_redefine-all */ 42);
 var fails = __webpack_require__(/*! ./_fails */ 3);
-var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
+var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
 var toInteger = __webpack_require__(/*! ./_to-integer */ 24);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var toIndex = __webpack_require__(/*! ./_to-index */ 118);
-var gOPN = __webpack_require__(/*! ./_object-gopn */ 37).f;
+var gOPN = __webpack_require__(/*! ./_object-gopn */ 38).f;
 var dP = __webpack_require__(/*! ./_object-dp */ 7).f;
 var arrayFill = __webpack_require__(/*! ./_array-fill */ 85);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
 var ARRAY_BUFFER = 'ArrayBuffer';
 var DATA_VIEW = 'DataView';
 var PROTOTYPE = 'prototype';
@@ -3196,7 +3196,7 @@ module.exports = function (object, names) {
 
 var dP = __webpack_require__(/*! ./_object-dp */ 7);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
-var getKeys = __webpack_require__(/*! ./_object-keys */ 34);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 35);
 
 module.exports = __webpack_require__(/*! ./_descriptors */ 6) ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
@@ -3220,7 +3220,7 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 6) ? Object.definePro
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
-var gOPN = __webpack_require__(/*! ./_object-gopn */ 37).f;
+var gOPN = __webpack_require__(/*! ./_object-gopn */ 38).f;
 var toString = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -3251,7 +3251,7 @@ module.exports.f = function getOwnPropertyNames(it) {
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
-var getKeys = __webpack_require__(/*! ./_object-keys */ 34);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 35);
 var gOPS = __webpack_require__(/*! ./_object-gops */ 53);
 var pIE = __webpack_require__(/*! ./_object-pie */ 49);
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
@@ -3359,7 +3359,7 @@ module.exports = function (fn, args, that) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var $parseInt = __webpack_require__(/*! ./_global */ 2).parseInt;
-var $trim = __webpack_require__(/*! ./_string-trim */ 43).trim;
+var $trim = __webpack_require__(/*! ./_string-trim */ 44).trim;
 var ws = __webpack_require__(/*! ./_string-ws */ 71);
 var hex = /^[-+]?0[xX]/;
 
@@ -3379,7 +3379,7 @@ module.exports = $parseInt(ws + '08') !== 8 || $parseInt(ws + '0x16') !== 22 ? f
 /***/ (function(module, exports, __webpack_require__) {
 
 var $parseFloat = __webpack_require__(/*! ./_global */ 2).parseFloat;
-var $trim = __webpack_require__(/*! ./_string-trim */ 43).trim;
+var $trim = __webpack_require__(/*! ./_string-trim */ 44).trim;
 
 module.exports = 1 / $parseFloat(__webpack_require__(/*! ./_string-ws */ 71) + '-0') !== -Infinity ? function parseFloat(str) {
   var string = $trim(String(str), 3);
@@ -3545,7 +3545,7 @@ module.exports = function (that, callbackfn, aLen, memo, isRight) {
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 35);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 
 module.exports = [].copyWithin || function copyWithin(target /* = 0 */, start /* = 0, end = @length */) {
@@ -3653,7 +3653,7 @@ module.exports = function (C, x) {
 "use strict";
 
 var strong = __webpack_require__(/*! ./_collection-strong */ 114);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var MAP = 'Map';
 
 // 23.1 Map Objects
@@ -3684,17 +3684,17 @@ module.exports = __webpack_require__(/*! ./_collection */ 60)(MAP, function (get
 "use strict";
 
 var dP = __webpack_require__(/*! ./_object-dp */ 7).f;
-var create = __webpack_require__(/*! ./_object-create */ 36);
-var redefineAll = __webpack_require__(/*! ./_redefine-all */ 41);
+var create = __webpack_require__(/*! ./_object-create */ 37);
+var redefineAll = __webpack_require__(/*! ./_redefine-all */ 42);
 var ctx = __webpack_require__(/*! ./_ctx */ 18);
-var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
-var forOf = __webpack_require__(/*! ./_for-of */ 40);
+var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
+var forOf = __webpack_require__(/*! ./_for-of */ 41);
 var $iterDefine = __webpack_require__(/*! ./_iter-define */ 77);
 var step = __webpack_require__(/*! ./_iter-step */ 109);
-var setSpecies = __webpack_require__(/*! ./_set-species */ 38);
+var setSpecies = __webpack_require__(/*! ./_set-species */ 39);
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 6);
-var fastKey = __webpack_require__(/*! ./_meta */ 29).fastKey;
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var fastKey = __webpack_require__(/*! ./_meta */ 30).fastKey;
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var SIZE = DESCRIPTORS ? '_s' : 'size';
 
 var getEntry = function (that, key) {
@@ -3840,7 +3840,7 @@ module.exports = {
 "use strict";
 
 var strong = __webpack_require__(/*! ./_collection-strong */ 114);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var SET = 'Set';
 
 // 23.2 Set Objects
@@ -3867,12 +3867,12 @@ module.exports = __webpack_require__(/*! ./_collection */ 60)(SET, function (get
 
 var each = __webpack_require__(/*! ./_array-methods */ 26)(0);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
-var meta = __webpack_require__(/*! ./_meta */ 29);
+var meta = __webpack_require__(/*! ./_meta */ 30);
 var assign = __webpack_require__(/*! ./_object-assign */ 97);
 var weak = __webpack_require__(/*! ./_collection-weak */ 117);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var fails = __webpack_require__(/*! ./_fails */ 3);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var WEAK_MAP = 'WeakMap';
 var getWeak = meta.getWeak;
 var isExtensible = Object.isExtensible;
@@ -3936,15 +3936,15 @@ if (fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp)
 
 "use strict";
 
-var redefineAll = __webpack_require__(/*! ./_redefine-all */ 41);
-var getWeak = __webpack_require__(/*! ./_meta */ 29).getWeak;
+var redefineAll = __webpack_require__(/*! ./_redefine-all */ 42);
+var getWeak = __webpack_require__(/*! ./_meta */ 30).getWeak;
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
-var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
-var forOf = __webpack_require__(/*! ./_for-of */ 40);
+var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
+var forOf = __webpack_require__(/*! ./_for-of */ 41);
 var createArrayMethod = __webpack_require__(/*! ./_array-methods */ 26);
 var $has = __webpack_require__(/*! ./_has */ 11);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var arrayFind = createArrayMethod(5);
 var arrayFindIndex = createArrayMethod(6);
 var id = 0;
@@ -4053,7 +4053,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // all object keys, includes non-enumerable and symbols
-var gOPN = __webpack_require__(/*! ./_object-gopn */ 37);
+var gOPN = __webpack_require__(/*! ./_object-gopn */ 38);
 var gOPS = __webpack_require__(/*! ./_object-gops */ 53);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var Reflect = __webpack_require__(/*! ./_global */ 2).Reflect;
@@ -4151,7 +4151,7 @@ module.exports = function (that, maxLength, fillString, left) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getKeys = __webpack_require__(/*! ./_object-keys */ 34);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 35);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var isEnum = __webpack_require__(/*! ./_object-pie */ 49).f;
 module.exports = function (isEntries) {
@@ -4198,7 +4198,7 @@ module.exports = function (NAME) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-var forOf = __webpack_require__(/*! ./_for-of */ 40);
+var forOf = __webpack_require__(/*! ./_for-of */ 41);
 
 module.exports = function (iter, ITERATOR) {
   var result = [];
@@ -4517,11 +4517,11 @@ var has = __webpack_require__(/*! ./_has */ 11);
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 6);
 var $export = __webpack_require__(/*! ./_export */ 0);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
-var META = __webpack_require__(/*! ./_meta */ 29).KEY;
+var META = __webpack_require__(/*! ./_meta */ 30).KEY;
 var $fails = __webpack_require__(/*! ./_fails */ 3);
 var shared = __webpack_require__(/*! ./_shared */ 51);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 42);
-var uid = __webpack_require__(/*! ./_uid */ 32);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 43);
+var uid = __webpack_require__(/*! ./_uid */ 33);
 var wks = __webpack_require__(/*! ./_wks */ 5);
 var wksExt = __webpack_require__(/*! ./_wks-ext */ 93);
 var wksDefine = __webpack_require__(/*! ./_wks-define */ 66);
@@ -4531,12 +4531,12 @@ var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var toIObject = __webpack_require__(/*! ./_to-iobject */ 15);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 22);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 31);
-var _create = __webpack_require__(/*! ./_object-create */ 36);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
+var _create = __webpack_require__(/*! ./_object-create */ 37);
 var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 96);
 var $GOPD = __webpack_require__(/*! ./_object-gopd */ 16);
 var $DP = __webpack_require__(/*! ./_object-dp */ 7);
-var $keys = __webpack_require__(/*! ./_object-keys */ 34);
+var $keys = __webpack_require__(/*! ./_object-keys */ 35);
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
@@ -4659,11 +4659,11 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-  __webpack_require__(/*! ./_object-gopn */ 37).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(/*! ./_object-gopn */ 38).f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(/*! ./_object-pie */ 49).f = $propertyIsEnumerable;
   __webpack_require__(/*! ./_object-gops */ 53).f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ 33)) {
+  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ 34)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -4756,7 +4756,7 @@ setToStringTag(global.JSON, 'JSON', true);
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(/*! ./_object-keys */ 34);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 35);
 var gOPS = __webpack_require__(/*! ./_object-gops */ 53);
 var pIE = __webpack_require__(/*! ./_object-pie */ 49);
 module.exports = function (it) {
@@ -4783,7 +4783,7 @@ module.exports = function (it) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ 36) });
+$export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ 37) });
 
 
 /***/ }),
@@ -4865,7 +4865,7 @@ __webpack_require__(/*! ./_object-sap */ 25)('getPrototypeOf', function () {
 
 // 19.1.2.14 Object.keys(O)
 var toObject = __webpack_require__(/*! ./_to-object */ 9);
-var $keys = __webpack_require__(/*! ./_object-keys */ 34);
+var $keys = __webpack_require__(/*! ./_object-keys */ 35);
 
 __webpack_require__(/*! ./_object-sap */ 25)('keys', function () {
   return function keys(it) {
@@ -4900,7 +4900,7 @@ __webpack_require__(/*! ./_object-sap */ 25)('getOwnPropertyNames', function () 
 
 // 19.1.2.5 Object.freeze(O)
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
-var meta = __webpack_require__(/*! ./_meta */ 29).onFreeze;
+var meta = __webpack_require__(/*! ./_meta */ 30).onFreeze;
 
 __webpack_require__(/*! ./_object-sap */ 25)('freeze', function ($freeze) {
   return function freeze(it) {
@@ -4920,7 +4920,7 @@ __webpack_require__(/*! ./_object-sap */ 25)('freeze', function ($freeze) {
 
 // 19.1.2.17 Object.seal(O)
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
-var meta = __webpack_require__(/*! ./_meta */ 29).onFreeze;
+var meta = __webpack_require__(/*! ./_meta */ 30).onFreeze;
 
 __webpack_require__(/*! ./_object-sap */ 25)('seal', function ($seal) {
   return function seal(it) {
@@ -4940,7 +4940,7 @@ __webpack_require__(/*! ./_object-sap */ 25)('seal', function ($seal) {
 
 // 19.1.2.15 Object.preventExtensions(O)
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
-var meta = __webpack_require__(/*! ./_meta */ 29).onFreeze;
+var meta = __webpack_require__(/*! ./_meta */ 30).onFreeze;
 
 __webpack_require__(/*! ./_object-sap */ 25)('preventExtensions', function ($preventExtensions) {
   return function preventExtensions(it) {
@@ -5201,16 +5201,16 @@ var cof = __webpack_require__(/*! ./_cof */ 19);
 var inheritIfRequired = __webpack_require__(/*! ./_inherit-if-required */ 72);
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 22);
 var fails = __webpack_require__(/*! ./_fails */ 3);
-var gOPN = __webpack_require__(/*! ./_object-gopn */ 37).f;
+var gOPN = __webpack_require__(/*! ./_object-gopn */ 38).f;
 var gOPD = __webpack_require__(/*! ./_object-gopd */ 16).f;
 var dP = __webpack_require__(/*! ./_object-dp */ 7).f;
-var $trim = __webpack_require__(/*! ./_string-trim */ 43).trim;
+var $trim = __webpack_require__(/*! ./_string-trim */ 44).trim;
 var NUMBER = 'Number';
 var $Number = global[NUMBER];
 var Base = $Number;
 var proto = $Number.prototype;
 // Opera ~12 has broken Object#toString
-var BROKEN_COF = cof(__webpack_require__(/*! ./_object-create */ 36)(proto)) == NUMBER;
+var BROKEN_COF = cof(__webpack_require__(/*! ./_object-create */ 37)(proto)) == NUMBER;
 var TRIM = 'trim' in String.prototype;
 
 // 7.1.3 ToNumber(argument)
@@ -5943,7 +5943,7 @@ $export($export.S, 'Math', {
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(/*! ./_export */ 0);
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 35);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
 var fromCharCode = String.fromCharCode;
 var $fromCodePoint = String.fromCodePoint;
 
@@ -6008,7 +6008,7 @@ $export($export.S, 'String', {
 "use strict";
 
 // 21.1.3.25 String.prototype.trim()
-__webpack_require__(/*! ./_string-trim */ 43)('trim', function ($trim) {
+__webpack_require__(/*! ./_string-trim */ 44)('trim', function ($trim) {
   return function trim() {
     return $trim(this, 3);
   };
@@ -6707,7 +6707,7 @@ $export($export.P + $export.F * (__webpack_require__(/*! ./_iobject */ 48) != Ob
 var $export = __webpack_require__(/*! ./_export */ 0);
 var html = __webpack_require__(/*! ./_html */ 69);
 var cof = __webpack_require__(/*! ./_cof */ 19);
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 35);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var arraySlice = [].slice;
 
@@ -7025,7 +7025,7 @@ var $export = __webpack_require__(/*! ./_export */ 0);
 
 $export($export.P, 'Array', { copyWithin: __webpack_require__(/*! ./_array-copy-within */ 108) });
 
-__webpack_require__(/*! ./_add-to-unscopables */ 30)('copyWithin');
+__webpack_require__(/*! ./_add-to-unscopables */ 31)('copyWithin');
 
 
 /***/ }),
@@ -7042,7 +7042,7 @@ var $export = __webpack_require__(/*! ./_export */ 0);
 
 $export($export.P, 'Array', { fill: __webpack_require__(/*! ./_array-fill */ 85) });
 
-__webpack_require__(/*! ./_add-to-unscopables */ 30)('fill');
+__webpack_require__(/*! ./_add-to-unscopables */ 31)('fill');
 
 
 /***/ }),
@@ -7068,7 +7068,7 @@ $export($export.P + $export.F * forced, 'Array', {
     return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-__webpack_require__(/*! ./_add-to-unscopables */ 30)(KEY);
+__webpack_require__(/*! ./_add-to-unscopables */ 31)(KEY);
 
 
 /***/ }),
@@ -7094,7 +7094,7 @@ $export($export.P + $export.F * forced, 'Array', {
     return $find(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
 });
-__webpack_require__(/*! ./_add-to-unscopables */ 30)(KEY);
+__webpack_require__(/*! ./_add-to-unscopables */ 31)(KEY);
 
 
 /***/ }),
@@ -7106,7 +7106,7 @@ __webpack_require__(/*! ./_add-to-unscopables */ 30)(KEY);
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./_set-species */ 38)('Array');
+__webpack_require__(/*! ./_set-species */ 39)('Array');
 
 
 /***/ }),
@@ -7121,7 +7121,7 @@ __webpack_require__(/*! ./_set-species */ 38)('Array');
 var global = __webpack_require__(/*! ./_global */ 2);
 var inheritIfRequired = __webpack_require__(/*! ./_inherit-if-required */ 72);
 var dP = __webpack_require__(/*! ./_object-dp */ 7).f;
-var gOPN = __webpack_require__(/*! ./_object-gopn */ 37).f;
+var gOPN = __webpack_require__(/*! ./_object-gopn */ 38).f;
 var isRegExp = __webpack_require__(/*! ./_is-regexp */ 55);
 var $flags = __webpack_require__(/*! ./_flags */ 57);
 var $RegExp = global.RegExp;
@@ -7160,7 +7160,7 @@ if (__webpack_require__(/*! ./_descriptors */ 6) && (!CORRECT_NEW || __webpack_r
   __webpack_require__(/*! ./_redefine */ 13)(global, 'RegExp', $RegExp);
 }
 
-__webpack_require__(/*! ./_set-species */ 38)('RegExp');
+__webpack_require__(/*! ./_set-species */ 39)('RegExp');
 
 
 /***/ }),
@@ -7358,15 +7358,15 @@ __webpack_require__(/*! ./_fix-re-wks */ 58)('split', 2, function (defined, SPLI
 
 "use strict";
 
-var LIBRARY = __webpack_require__(/*! ./_library */ 33);
+var LIBRARY = __webpack_require__(/*! ./_library */ 34);
 var global = __webpack_require__(/*! ./_global */ 2);
 var ctx = __webpack_require__(/*! ./_ctx */ 18);
 var classof = __webpack_require__(/*! ./_classof */ 50);
 var $export = __webpack_require__(/*! ./_export */ 0);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var aFunction = __webpack_require__(/*! ./_a-function */ 10);
-var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
-var forOf = __webpack_require__(/*! ./_for-of */ 40);
+var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
+var forOf = __webpack_require__(/*! ./_for-of */ 41);
 var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 59);
 var task = __webpack_require__(/*! ./_task */ 87).set;
 var microtask = __webpack_require__(/*! ./_microtask */ 88)();
@@ -7535,7 +7535,7 @@ if (!USE_NATIVE) {
     this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
     this._n = false;          // <- notify
   };
-  Internal.prototype = __webpack_require__(/*! ./_redefine-all */ 41)($Promise.prototype, {
+  Internal.prototype = __webpack_require__(/*! ./_redefine-all */ 42)($Promise.prototype, {
     // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
     then: function then(onFulfilled, onRejected) {
       var reaction = newPromiseCapability(speciesConstructor(this, $Promise));
@@ -7566,8 +7566,8 @@ if (!USE_NATIVE) {
 }
 
 $export($export.G + $export.W + $export.F * !USE_NATIVE, { Promise: $Promise });
-__webpack_require__(/*! ./_set-to-string-tag */ 42)($Promise, PROMISE);
-__webpack_require__(/*! ./_set-species */ 38)(PROMISE);
+__webpack_require__(/*! ./_set-to-string-tag */ 43)($Promise, PROMISE);
+__webpack_require__(/*! ./_set-species */ 39)(PROMISE);
 Wrapper = __webpack_require__(/*! ./_core */ 21)[PROMISE];
 
 // statics
@@ -7644,7 +7644,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-
 "use strict";
 
 var weak = __webpack_require__(/*! ./_collection-weak */ 117);
-var validate = __webpack_require__(/*! ./_validate-collection */ 45);
+var validate = __webpack_require__(/*! ./_validate-collection */ 46);
 var WEAK_SET = 'WeakSet';
 
 // 23.4 WeakSet Objects
@@ -7673,7 +7673,7 @@ var $export = __webpack_require__(/*! ./_export */ 0);
 var $typed = __webpack_require__(/*! ./_typed */ 61);
 var buffer = __webpack_require__(/*! ./_typed-buffer */ 90);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 35);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 36);
 var toLength = __webpack_require__(/*! ./_to-length */ 8);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 var ArrayBuffer = __webpack_require__(/*! ./_global */ 2).ArrayBuffer;
@@ -7713,7 +7713,7 @@ $export($export.P + $export.U + $export.F * __webpack_require__(/*! ./_fails */ 
   }
 });
 
-__webpack_require__(/*! ./_set-species */ 38)(ARRAY_BUFFER);
+__webpack_require__(/*! ./_set-species */ 39)(ARRAY_BUFFER);
 
 
 /***/ }),
@@ -7913,7 +7913,7 @@ $export($export.S + $export.F * !__webpack_require__(/*! ./_fails */ 3)(function
 
 // 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
 var $export = __webpack_require__(/*! ./_export */ 0);
-var create = __webpack_require__(/*! ./_object-create */ 36);
+var create = __webpack_require__(/*! ./_object-create */ 37);
 var aFunction = __webpack_require__(/*! ./_a-function */ 10);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
@@ -8226,7 +8226,7 @@ var gOPD = __webpack_require__(/*! ./_object-gopd */ 16);
 var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 17);
 var has = __webpack_require__(/*! ./_has */ 11);
 var $export = __webpack_require__(/*! ./_export */ 0);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 31);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 32);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
 var isObject = __webpack_require__(/*! ./_is-object */ 4);
 
@@ -8300,7 +8300,7 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(/*! ./_add-to-unscopables */ 30)('includes');
+__webpack_require__(/*! ./_add-to-unscopables */ 31)('includes');
 
 
 /***/ }),
@@ -8334,7 +8334,7 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(/*! ./_add-to-unscopables */ 30)('flatMap');
+__webpack_require__(/*! ./_add-to-unscopables */ 31)('flatMap');
 
 
 /***/ }),
@@ -8367,7 +8367,7 @@ $export($export.P, 'Array', {
   }
 });
 
-__webpack_require__(/*! ./_add-to-unscopables */ 30)('flatten');
+__webpack_require__(/*! ./_add-to-unscopables */ 31)('flatten');
 
 
 /***/ }),
@@ -8452,7 +8452,7 @@ $export($export.P + $export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(userAge
 "use strict";
 
 // https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-__webpack_require__(/*! ./_string-trim */ 43)('trimLeft', function ($trim) {
+__webpack_require__(/*! ./_string-trim */ 44)('trimLeft', function ($trim) {
   return function trimLeft() {
     return $trim(this, 1);
   };
@@ -8471,7 +8471,7 @@ __webpack_require__(/*! ./_string-trim */ 43)('trimLeft', function ($trim) {
 "use strict";
 
 // https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-__webpack_require__(/*! ./_string-trim */ 43)('trimRight', function ($trim) {
+__webpack_require__(/*! ./_string-trim */ 44)('trimRight', function ($trim) {
   return function trimRight() {
     return $trim(this, 2);
   };
@@ -9463,10 +9463,10 @@ var microtask = __webpack_require__(/*! ./_microtask */ 88)();
 var OBSERVABLE = __webpack_require__(/*! ./_wks */ 5)('observable');
 var aFunction = __webpack_require__(/*! ./_a-function */ 10);
 var anObject = __webpack_require__(/*! ./_an-object */ 1);
-var anInstance = __webpack_require__(/*! ./_an-instance */ 39);
-var redefineAll = __webpack_require__(/*! ./_redefine-all */ 41);
+var anInstance = __webpack_require__(/*! ./_an-instance */ 40);
+var redefineAll = __webpack_require__(/*! ./_redefine-all */ 42);
 var hide = __webpack_require__(/*! ./_hide */ 12);
-var forOf = __webpack_require__(/*! ./_for-of */ 40);
+var forOf = __webpack_require__(/*! ./_for-of */ 41);
 var RETURN = forOf.RETURN;
 
 var getMethod = function (fn) {
@@ -9652,7 +9652,7 @@ hide($Observable.prototype, OBSERVABLE, function () { return this; });
 
 $export($export.G, { Observable: $Observable });
 
-__webpack_require__(/*! ./_set-species */ 38)('Observable');
+__webpack_require__(/*! ./_set-species */ 39)('Observable');
 
 
 /***/ }),
@@ -9713,11 +9713,11 @@ $export($export.G + $export.B, {
 /***/ (function(module, exports, __webpack_require__) {
 
 var $iterators = __webpack_require__(/*! ./es6.array.iterator */ 86);
-var getKeys = __webpack_require__(/*! ./_object-keys */ 34);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 35);
 var redefine = __webpack_require__(/*! ./_redefine */ 13);
 var global = __webpack_require__(/*! ./_global */ 2);
 var hide = __webpack_require__(/*! ./_hide */ 12);
-var Iterators = __webpack_require__(/*! ./_iterators */ 44);
+var Iterators = __webpack_require__(/*! ./_iterators */ 45);
 var wks = __webpack_require__(/*! ./_wks */ 5);
 var ITERATOR = wks('iterator');
 var TO_STRING_TAG = wks('toStringTag');
@@ -10583,12 +10583,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_p2__ = __webpack_require__(/*! p2 */ 127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_p2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_p2__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_phaser__ = __webpack_require__(/*! phaser */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_phaser__ = __webpack_require__(/*! phaser */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_phaser__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__states_Boot__ = __webpack_require__(/*! ./states/Boot */ 337);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__states_Splash__ = __webpack_require__(/*! ./states/Splash */ 338);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__states_Game__ = __webpack_require__(/*! ./states/Game */ 340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config__ = __webpack_require__(/*! ./config */ 342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config__ = __webpack_require__(/*! ./config */ 345);
 
 
 
@@ -10603,6 +10603,7 @@ class Game extends __WEBPACK_IMPORTED_MODULE_2_phaser___default.a.Game {
   constructor() {
     const docElement = document.documentElement;
     const width = docElement.clientWidth > __WEBPACK_IMPORTED_MODULE_6__config__["a" /* default */].gameWidth ? __WEBPACK_IMPORTED_MODULE_6__config__["a" /* default */].gameWidth : docElement.clientWidth;
+    //const height = docElement.clientHeight * config.gameWidth / width
     const height = docElement.clientHeight > __WEBPACK_IMPORTED_MODULE_6__config__["a" /* default */].gameHeight ? __WEBPACK_IMPORTED_MODULE_6__config__["a" /* default */].gameHeight : docElement.clientHeight;
 
     super(width, height, __WEBPACK_IMPORTED_MODULE_2_phaser___default.a.CANVAS, 'content', null);
@@ -10657,7 +10658,7 @@ if (window.cordova) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webfontloader__ = __webpack_require__(/*! webfontloader */ 128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webfontloader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_webfontloader__);
@@ -10666,7 +10667,7 @@ if (window.cordova) {
 
 /* harmony default export */ __webpack_exports__["a"] = (class extends __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.State {
   init() {
-    this.stage.backgroundColor = '#EDEEC9';
+    this.stage.backgroundColor = '0x89d7fb';
     this.fontsReady = false;
     this.fontsLoaded = this.fontsLoaded.bind(this);
     if (!this.game.device.desktop) {
@@ -10676,6 +10677,53 @@ if (window.cordova) {
     }
     this.game.physics.startSystem(__WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
     this.game.physics.arcade.gravity.y = 1000;
+
+    // we'll execute next lines only if the game is not running on a desktop
+    if (!this.game.device.desktop) {
+      /*  we want the game to run only in portrait mode, so we need something
+          to force the game to run in only one orientation.
+          forceOrientation method enables generation of incorrect orientation signals
+          which we can handle to warn players they are playing in the wrong orientation  */
+      this.game.scale.forceOrientation(false, true);
+
+      // this function is executed when the game enters in an incorrect orientation
+      this.game.scale.enterIncorrectOrientation.add(function () {
+
+        // pausing the game. a paused game doesn't update any of its subsystems
+        game.paused = true;
+
+        // hiding the canvas
+        document.querySelector("canvas").style.display = "none";
+
+        // showing the div with the "wrong orientation" message
+        document.getElementById("wrongorientation").style.display = "block";
+      });
+
+      // this function is executed when the game enters in an correct orientation
+      game.scale.leaveIncorrectOrientation.add(function () {
+
+        // resuming the game
+        game.paused = false;
+
+        // showing the canvas
+        document.querySelector("canvas").style.display = "block";
+
+        // hiding the div with the "wrong orientation" message
+        document.getElementById("wrongorientation").style.display = "none";
+      });
+    }
+    /*  setting scale mode to cover the larger area of the window while
+              keeping display ratio and show all the content.
+              we know we are covering the entire area of a portrait device thanks to the
+              way we set game width and height  */
+    // this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+
+    // centering the canvas horizontally and vertically
+    //this.game.scale.pageAlignHorizontally = true;
+    //this.game.scale.pageAlignVertically = true;
+
+    // prevent the game to pause if it loses focus.
+    this.game.stage.disableVisibilityChange = true;
   }
 
   preload() {
@@ -10690,16 +10738,30 @@ if (window.cordova) {
     text.anchor.setTo(0.5, 0.5);
 
     this.load.image('loaderBg', './assets/images/loader-bg.png');
-    this.load.image('loaderBar', './assets/images/loader-bar.png');
-    this.load.image('ground', 'assets/images/ground.png');
-    this.load.image('platform', 'assets/images/platform.png');
-    this.load.image('goal', 'assets/images/gorilla3.png');
-    this.load.image('arrowButton', 'assets/images/arrowButton.png');
-    this.load.image('actionButton', 'assets/images/actionButton.png');
-    this.load.image('barrel', 'assets/images/barrel.png');
+    this.load.image('floor', './assets/sprites/floor.png');
+    this.load.image('ladder', './assets/sprites/ladder.png');
+    this.load.image('coinparticle', './assets/sprites/coinparticle.png');
+    this.load.image('spike', './assets/sprites/spike.png');
+    this.load.image('cloud', './assets/sprites/cloud.png');
+    this.load.image('arrow', './assets/sprites/arrow.png');
+    this.load.image('monster', './assets/sprites/monster.png');
+    this.load.image('spikedmonster', './assets/sprites/spikedmonster.png');
+    this.load.image('tap', './assets/sprites/tap.png');
+    this.load.audio('coinsound', './assets/sounds/coin.mp3');
+    this.load.image('jump', './assets/sounds/jump.mp3');
+    this.load.image('hurt', './assets/sounds/hurt.mp3');
 
-    this.load.spritesheet('player', 'assets/images/player_spritesheet.png', 28, 30, 5, 1, 1);
-    this.load.spritesheet('fire', 'assets/images/fire_spritesheet.png', 20, 21, 2, 1, 1);
+    this.load.spritesheet('hero', 'assets/sprites/hero.png', 24, 48);
+    this.load.spritesheet('coin', 'assets/sprites/coin.png', 48, 48);
+    this.load.spritesheet('fire', 'assets/sprites/fire.png', 32, 58);
+
+    /*  you can also use bitmap font to create your own font with effects applied to it
+            or just use fonts which aren't the old boring arial, verdana, etc.
+            as with all load operations the first parameter is the key
+            next is the bitmap font file itself, usually a png image
+            finally is the path to the fnt file that goes with the font.
+            You can create your bitmap fonts with the free online tool Littera - http://kvazars.com/littera/  */
+    game.load.bitmapFont("font", 'assets/fonts/font.png', 'assets/fonts/font.fnt');
   }
 
   render() {
@@ -10723,7 +10785,7 @@ if (window.cordova) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(/*! ../utils */ 339);
 
@@ -10777,12 +10839,12 @@ const centerGameObjects = objects => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sprites_Mushroom__ = __webpack_require__(/*! ../sprites/Mushroom */ 341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sprites_Ground_js__ = __webpack_require__(/*! ../sprites/Ground.js */ 344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sprites_Platform_js__ = __webpack_require__(/*! ../sprites/Platform.js */ 345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sprites_Player_js__ = __webpack_require__(/*! ../sprites/Player.js */ 346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sprites_Ground_js__ = __webpack_require__(/*! ../sprites/Ground.js */ 342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sprites_Platform_js__ = __webpack_require__(/*! ../sprites/Platform.js */ 343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sprites_Player_js__ = __webpack_require__(/*! ../sprites/Player.js */ 344);
 /* globals __DEV__ */
 
 
@@ -10791,170 +10853,1706 @@ const centerGameObjects = objects => {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (class extends __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.State {
-  init() {
-    this.cursors = this.game.input.keyboard.createCursorKeys();
-    this.RUNNING_SPEED = 180;
-    this.JUMPING_SPEED = 550;
-  }
-  preload() {}
+    init() {
+        this.cursors = this.game.input.keyboard.createCursorKeys();
+        this.RUNNING_SPEED = 180;
+        this.JUMPING_SPEED = 550;
 
-  create() {
-    // const bannerText = 'Phaser + ES6 + Webpack'
-    // let banner = this.add.text(this.world.centerX, this.game.height - 80, bannerText, {
-    //   font: '40px Bangers',
-    //   fill: '#77BFA3',
-    //   smoothed: false
-    // })
+        this.gameOptions = {
 
-    // banner.padding.set(10, 16)
-    // banner.anchor.setTo(0.5)
+            // width of the game, in pixels. Height will be calculated accordingly
+            gameWidth: 360,
 
-    // this.mushroom = new Mushroom({
-    //   game: this.game,
-    //   x: this.world.centerX,
-    //   y: this.world.centerY,
-    //   asset: 'mushroom'
-    // })
+            /*  where will first floor be placed? In this case at 5/8 the height of the game
+                this is where the player will move  */
+            floorStart: 1 / 8 * 5,
 
-    // this.game.add.existing(this.mushroom)
-    let mobileBottom = 65;
-    let desktopGroundY = 520;
-    let mobileGroundY = 520 - mobileBottom;
-    let desktopPlatformY = desktopGroundY - 200;
-    let mobilePlatformY = mobileGroundY - 200;
-    let desktopPlayerY = desktopPlatformY - 100;
-    let mobilePlayerY = mobilePlatformY - 100;
+            // gap between two floors, in pixels. In this case each floor is 250 pixels above previous floor
+            floorGap: 250,
 
-    this.desktop = this.game.device.desktop;
-    let groundY = this.desktop ? desktopGroundY : mobileGroundY;
-    let platformY = this.desktop ? desktopPlatformY : mobilePlatformY;
-    let playerY = this.desktop ? desktopPlayerY : mobilePlayerY;
+            // local player gravity, managed by ARCADE physics. Does not actually use any unit of measurement
+            playerGravity: 10000,
 
-    this.ground = new __WEBPACK_IMPORTED_MODULE_2__sprites_Ground_js__["a" /* default */]({
-      game: this.game,
-      x: 0,
-      y: groundY,
-      asset: 'ground'
-    });
+            // player movement speed, in pixels per second
+            playerSpeed: 450,
 
-    this.platform = new __WEBPACK_IMPORTED_MODULE_3__sprites_Platform_js__["a" /* default */]({
-      game: this.game,
-      x: 0,
-      y: platformY,
-      asset: 'platform'
-    });
+            // player climibng speed, in pixelsp er second
+            climbSpeed: 450,
 
-    this.player = new __WEBPACK_IMPORTED_MODULE_4__sprites_Player_js__["a" /* default */]({
-      game: this.game,
-      x: 100,
-      y: playerY,
-      asset: 'player',
-      frame: 3
-    });
+            // force applied to the player when the character jumps
+            playerJump: 1800,
 
-    this.game.physics.arcade.enable(this.ground);
-    this.ground.body.allowGravity = false;
-    this.ground.body.immovable = true;
-    this.game.physics.arcade.enable(this.platform);
-    this.platform.body.allowGravity = false;
-    this.platform.body.immovable = true;
-    this.game.physics.arcade.enable(this.player);
+            // speed of arrows, in pixels per second
+            arrowSpeed: 1000,
 
-    this.player.anchor.setTo(0.5);
-    this.player.customParams = {};
-    // this.player.animations.add('walking', [0, 1, 2, 1], 6, true)
-    // this.player.play('walking')
+            /*  we do not want a coin to appear on each floor, so coinRatio is a variable with a positive number.
+                when a floor is created, a random integer number between 0 and coinRatio is generated, and
+                the coin will appear ony if the random number is greater than zero.
+                basically the probability for a coin to appear is coinRatio(coinRatio+1), or 2/3 in this case  */
+            coinRatio: 2,
 
-    this.game.add.existing(this.ground);
-    this.game.add.existing(this.platform);
-    this.game.add.existing(this.player);
-    this.createOnscreenControls();
-  }
+            // monster speed, in pixels per second
+            monsterSpeed: 250,
 
-  update() {
-    this.game.physics.arcade.collide(this.player, this.ground, this.landed);
-    this.game.physics.arcade.collide(this.player, this.platform, this.landed);
-    this.player.body.velocity.x = 0;
+            /*  following the same concept applied to coinRatio, doubleSpikeRatio determines whether we have
+                to put two spikes on the same floor. The probability is doubleSpikeRatio(doubleSpikeRatio+1)  */
+            doubleSpikeRatio: 1,
 
-    if (this.cursors.left.isDown || this.player.customParams.isMovingLeft) {
-      this.player.body.velocity.x = -this.RUNNING_SPEED;
-    } else if (this.cursors.right.isDown || this.player.customParams.isMovingRight) {
-      this.player.body.velocity.x = this.RUNNING_SPEED;
+            // you can customize up to the color of the sky thanks to skyColor, which accepts the hexadecimal RGB value
+            skyColor: 0x89d7fb,
+
+            /*  the radius, in pixel, of a "safe area" which is an area where no obstacles can be placed. I use it
+                to prevent spikes to be created too close to a ladder, or too close to other spikes, and so on  */
+            safeRadius: 180,
+
+            /*  the name of the variable where to save game information into local storage. It's a string.
+                changing the string will also reset game information  */
+            localStorageName: "ladderzGame",
+
+            // version of the game. Just in case you need to display it somewhere
+            versionNumber: "1.0",
+
+            // relative path where to store sprites
+            spritesPath: "assets/sprites/",
+
+            // relative path where to store fonts
+            fontsPath: "assets/fonts/",
+
+            // relative path where to store setBounds
+            soundPath: "assets/sounds/"
+        };
+    }
+    preload() {}
+
+    create() {
+        // const bannerText = 'Phaser + ES6 + Webpack'
+        // let banner = this.add.text(this.world.centerX, this.game.height - 80, bannerText, {
+        //   font: '40px Bangers',
+        //   fill: '#77BFA3',
+        //   smoothed: false
+        // })
+
+        // banner.padding.set(10, 16)
+        // banner.anchor.setTo(0.5)
+
+        // this.mushroom = new Mushroom({
+        //   game: this.game,
+        //   x: this.world.centerX,
+        //   y: this.world.centerY,
+        //   asset: 'mushroom'
+        // })
+
+        // this.game.add.existing(this.mushroom)
+        /*  using a ternary operator to save into savedData variable the object inside local storage, or new object with both "score" and "coins" values to zero.
+               basically we check if localStorage.getItem(this.gameOptions.localStorageName) is null (no saved data)
+               in this case savedData will become the object {score : 0, coins: 0}
+               if localStorage.getItem(this.gameOptions.localStorageName) is NOT null, savedData will become the object created by
+               decoding the JSON string saved  */
+        this.savedData = localStorage.getItem('hiphophomieprojects') == null ? { score: 0, coins: 0 } : JSON.parse(localStorage.getItem('hiphophomieprojects'));
+
+        /*  each game starts with some default properties such as the score at zero, the lives at three
+        and so on, which are defined in this case by setDefaultProperties method  */
+        this.setDefaultProperties();
+
+        // this method will add audio to the game
+        this.addAudio();
+
+        /*  we are using ARCADE physics in this game.
+            the physics engine will handle collisions, overlaps, velocities and motions  */
+        this.game.physics.startSystem(__WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+        /*  we have to define world bounds.
+            a game has only one world: the abstract place in which all game objects live.
+            world is not bound by stage limits and can be any size.
+            "setBounds" updates the size of this world, and the four arguments are respectively:
+            x coordintate of the top left most corner of the world, in pixels.
+            y coordintate of the top left most corner of the world.
+            width of the game world in pixels.
+            height of the game world in pixels  */
+        this.game.world.setBounds(0, -3 * this.gameOptions.floorGap, this.game.width, this.game.height + 3 * this.gameOptions.floorGap);
+
+        /*  this method will create the groups required by the game
+            a group is a container for display objects including sprites and images.
+            we will also use groups to check for collisions  */
+        this.defineGroups();
+
+        // this method will create a particle emitter to be used when the player collects a coin
+        this.createParticles();
+
+        // this method will create a fixed overlay where we'll place the score
+        this.createOverlay();
+
+        // this method will create the menu
+        this.createMenu();
+
+        // this method will define the tweens to be used in game
+        this.defineTweens();
+
+        // this method will draw the level
+        this.drawLevel();
+
+        /*  this is a listener which waits for a pointer - mouse or finger - to be pressed down
+            then fire the callback function this.handkeTap.
+            the "this" in the second argument is the context used in the function.  */
+        this.game.input.onDown.add(this.handleTap, this);
     }
 
-    if ((this.cursors.up.isDown || this.player.customParams.mustJump) && this.player.body.touching.down) {
-      this.player.body.velocity.y = -this.JUMPING_SPEED;
-      this.player.customParams.mustJump = false;
+    // method to set default properties
+    setDefaultProperties() {
+        // this property will let us know if it's game over. It starts with "false" value because the game is not over yet
+        this.gameOver = false;
+
+        /*  we use reachedFloor to keep track of the floor reached by the player.
+            first floor is zero because it's the floor the player is running on during the splash screen  */
+        this.reachedFloor = 0;
+
+        // collectedCoins counts the coins the player collects. Starts at zero. No coins.
+        this.collectedCoins = 0;
+
+        // flag to determine if the player can jump
+        this.canJump = true;
+
+        // flag to determine if the player is climbing a ladder
+        this.isClimbing = false;
+
+        /*  to save resources, this game uses object pooling.
+            object pooling is a technique which stores a collection of a particular object that an application will create
+            and keeps on hand for those situations where creating each instance is expensive.
+            once a graphic asset does not need anymore
+        */
+
+        // the empty array for floor pooling
+        this.floorPool = [];
+
+        // the empty array for ladder pooling
+        this.ladderPool = [];
+
+        // the empty array for coin pooling
+        this.coinPool = [];
+
+        // the empty array for spike pooling
+        this.spikePool = [];
+
+        // the empty array for fire pooling
+        this.firePool = [];
+
+        // the empty array for arrow pooling
+        this.arrowPool = [];
+
+        // the empty array for monster pooling
+        this.monsterPool = [];
+
+        // the empty array for spiked monster pooling
+        this.spikedMonsterPool = [];
     }
-  }
 
-  landed(player, ground) {
-    // console.log('landed')
-  }
+    // this method will define the sound effects used in the game
+    addAudio() {
 
-  createOnscreenControls() {
-    if (this.desktop) {
-      this.leftArrow = this.add.button(20, 535, 'arrowButton');
-      this.rightArrow = this.add.button(110, 535, 'arrowButton');
-      this.actionButton = this.add.button(280, 535, 'actionButton');
-    } else {
-      this.leftArrow = this.add.button(20, 470, 'arrowButton');
-      this.rightArrow = this.add.button(110, 470, 'arrowButton');
-      this.actionButton = this.add.button(280, 470, 'actionButton');
+        /*  this is how we add an audio resource to the game, the argument is the key
+            we assigned to the sound during preload  */
+        this.coinSound = this.game.add.audio("coinsound");
+        this.hurtSound = this.game.add.audio("hurtsound");
+        this.jumpSound = this.game.add.audio("jumpsound");
     }
 
-    this.leftArrow.alpha = 0.5;
-    this.rightArrow.alpha = 0.5;
-    this.actionButton.alpha = 0.5;
+    // this method will define the groups used in the game
+    defineGroups() {
 
-    this.actionButton.events.onInputDown.add(function () {
-      this.player.customParams.mustJump = true;
-    }, this);
+        /*  as you can see, with game.add.group() you will add a group
+            gameGroup is the main group, and will contain children groups  */
+        this.gameGroup = this.game.add.group();
 
-    this.actionButton.events.onInputUp.add(function () {
-      this.player.customParams.mustJump = false;
-    }, this);
+        // group which will contain all floors
+        this.floorGroup = this.game.add.group();
 
-    //left
-    this.leftArrow.events.onInputDown.add(function () {
-      this.player.customParams.isMovingLeft = true;
-    }, this);
+        // floorGroup is a child of gameGroup
+        this.gameGroup.add(this.floorGroup);
 
-    this.leftArrow.events.onInputUp.add(function () {
-      this.player.customParams.isMovingLeft = false;
-    }, this);
+        // group which will contain all ladders, child of gameGroup
+        this.ladderGroup = this.game.add.group();
+        this.gameGroup.add(this.ladderGroup);
 
-    this.leftArrow.events.onInputOver.add(function () {
-      this.player.customParams.isMovingLeft = true;
-    }, this);
+        // group which will contain all coins, child of gameGroup
+        this.coinGroup = this.game.add.group();
+        this.gameGroup.add(this.coinGroup);
 
-    this.leftArrow.events.onInputOut.add(function () {
-      this.player.customParams.isMovingLeft = false;
-    }, this);
+        // group which will contain all flames, monsters and spikes, child of gameGroup
+        this.deadlyGroup = this.game.add.group();
+        this.gameGroup.add(this.deadlyGroup);
 
-    //right
-    this.rightArrow.events.onInputDown.add(function () {
-      this.player.customParams.isMovingRight = true;
-    }, this);
+        // group which will contain all arrows, child of gameGroup
+        this.arrowGroup = this.game.add.group();
+        this.gameGroup.add(this.arrowGroup);
 
-    this.rightArrow.events.onInputUp.add(function () {
-      this.player.customParams.isMovingRight = false;
-    }, this);
+        // group which will contain overlay information
+        this.overlayGroup = this.game.add.group();
 
-    this.rightArrow.events.onInputOver.add(function () {
-      this.player.customParams.isMovingRight = true;
-    }, this);
-
-    this.rightArrow.events.onInputOut.add(function () {
-      this.player.customParams.isMovingRight = false;
-    }, this);
-  }
-
-  render() {
-    if (true) {
-      // this.game.debug.spriteInfo(this.mushroom, 32, 32)
+        // group which will contain the menu
+        this.menuGroup = this.game.add.group();
     }
-  }
+
+    // method to create a particle emitter
+    createParticles() {
+        /*  an emitter is a lightweight particle emitter that uses ARCADE physics.
+            it can be used for one-time explosions or for continuous effects like rain and fire.
+            all it really does is launch Particle objects out at set intervals,
+            and fixes their positions and velocities accordingly.
+            the three arguments represent respectively:
+            * the x coordinate within the emitter that the particles are emitted from.
+            * the y coordinate within the Emitter that the particles are emitted from.
+            * the total number of particles in this emitter.  */
+        this.emitter = this.game.add.emitter(0, 0, 80);
+
+        // telling the emitter we will be using the image with "coinparticle" key
+        this.emitter.makeParticles("coinparticle");
+
+        /*  each particle will have a randomly generated alpha (transparency) from 0.4 to 0.6
+            remember 0 = completely transparent; 1 = completely opaque  */
+        this.emitter.setAlpha(0.4, 0.6);
+
+        /*  each particle will have a randomly generated x and y scale between 0.4 and 0.6
+            the first two arguments define minimum and maximum of x scale
+            the second two arguments refer to y scale  */
+        this.emitter.setScale(0.4, 0.6, 0.4, 0.6);
+
+        // the emitter is added to gameGroup group
+        this.gameGroup.add(this.emitter);
+    }
+
+    // method to create the overlay
+    createOverlay() {
+
+        /*  this is how we add a sprite to the game.
+            the three arguments are:
+            * the x position
+            * the y position
+            * the key of the image  */
+        var cloud = this.game.add.sprite(0, this.game.height, "cloud");
+
+        /*  the anchor sets the origin point of the texture.
+            the default is 0,0 this means the texture's origin is the top left.
+            setting than anchor to 0.5,0.5 means the textures origin is centered.
+            setting the anchor to 1,1 would mean the textures origin points will be the bottom right corner.
+            in this case the anchor is set to the bottom left corner
+        */
+        cloud.anchor.set(0, 1);
+
+        /*  we are applying the cloud a tint color with the same color as the background color.
+            since the cloud is a vertical gradient from transparent to opaque white, after the tint
+            it will be a gradient from transapret to opaque sky color.
+            this will give the "fade out" effect of the floor disappearing to the bottom of the screen  */
+        cloud.tint = 0x89d7fb;
+
+        // adding the cloud to overlayGroup
+        this.overlayGroup.add(cloud);
+
+        /*  this is how we add a bitmap text to the game, let's have a look at the arguments:
+            * the x coordinate
+            * the y coordinate
+            * the key of the font used
+            * the string to write
+            * the font size
+            in this case we are showing the best score
+        */
+        var highScoreText = this.game.add.bitmapText(this.game.width - 10, this.game.height - 10, "font", "Best Score: " + this.savedData.score.toString(), 30);
+
+        // bitmap texts can also have their registration point set
+        highScoreText.anchor.set(1, 1);
+
+        // scoreText is also added to overlayGroup
+        this.overlayGroup.add(highScoreText);
+
+        // same concept applies to the bitmap text which shows the amount of coins collected
+        var coinsText = this.game.add.bitmapText(this.game.width / 2, this.game.height - 10, "font", "Coins: " + this.savedData.coins.toString(), 30);
+        coinsText.anchor.set(0.5, 1);
+        this.overlayGroup.add(coinsText);
+
+        /*  same concept applies to the bitmap text which shows the score.
+            this time the bitmapText is bound to a property than to a local variable
+            because we are goint to update it inside other methods  */
+        this.scoreText = this.game.add.bitmapText(10, this.game.height - 10, "font", "Score: 0", 30);
+        this.scoreText.anchor.set(0, 1);
+        this.overlayGroup.add(this.scoreText);
+    }
+
+    // method to create the menu
+    createMenu() {
+
+        // adding "tap" image, setting its registration point and adding it to "menuGroup" group
+        var tap = this.game.add.sprite(this.game.width / 2, this.game.height - 150, "tap");
+        tap.anchor.set(0.5);
+        this.menuGroup.add(tap);
+
+        /*  let's meet the tween.
+            a wween allows you to alter one or more properties of a target object over a defined period of time.
+            this can be used for things such as alpha fading sprites, scaling them or give them a motion
+            tapTween is a new tween applied to "tap" image.
+            it brings the alpha to zero as you can see into the first argument of "to" method
+            200 is the amount of milliseconds
+            Phaser.Easing.Cubic.InOut is the easing
+            true (the first one) means the tween starts immediately
+            0 is the delay in milliseconds before tween starts (no delay in this case)
+            -1 is the amount of times the tween must be played. -1 means infinite times
+            true (the second one) sets the yoyo effect, it means the tween will be played forward and backward  */
+        var tapTween = this.game.add.tween(tap).to({
+            alpha: 0
+        }, 200, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Easing.Cubic.InOut, true, 0, -1, true);
+
+        // adding a bitmap text with in-game instructions ("tap to jump"), setting its anchor and add it to menuGroup group
+        var tapText = this.game.add.bitmapText(this.game.width / 2, tap.y - 120, "font", "Tap to jump", 45);
+        tapText.anchor.set(0.5);
+        this.menuGroup.add(tapText);
+
+        // adding a bitmap text with game title, setting its anchor and add it to menuGroup group
+        var titleText = this.game.add.bitmapText(this.game.width / 2, tap.y - 200, "font", "LADDERZ", 90);
+        titleText.anchor.set(0.5);
+        this.menuGroup.add(titleText);
+    }
+
+    // method to define the tween which scrolls the level as the player climbs the ladders
+    defineTweens() {
+
+        // we keep a counter to reming us how many tweens we have to go, starting at zero
+        this.tweensToGo = 0;
+
+        /*  this is a simple tween, simpler than the one seen in "createMenu" method, where we scroll down
+            the entire gameGroup by gameOptions.floorGap pixels actually moving it down by a floor
+            in 500 milliseconds  */
+        this.scrollTween = this.game.add.tween(this.gameGroup);
+        this.scrollTween.to({
+            y: this.gameOptions.floorGap
+        }, 500, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Easing.Cubic.Out);
+
+        // this is another tween feature: we can add a callback function to be executed when the tween is complete
+        this.scrollTween.onComplete.add(function () {
+
+            /*  before we start looking at the code, let me clarify something about this endless runner.
+                actually the player is not climbing, but it's the whole level to scroll down and resposition
+                in the same original y coordinate.
+                this way the player has the feeling as if the hero was climbing the tower while it's the whole
+                world to move down and reposition, just like when you walk up in an escalator moving down at
+                your same speed.
+                        that said, we reposition gameGroup to its initial position   */
+            this.gameGroup.y = 0;
+
+            // now we loop through all gameGroup children executing the function having "item" argument = the child of the group
+            this.gameGroup.forEach(function (item) {
+
+                /*  you can see from "defineGroups" method that gameGroup children are all groups.
+                    the lenght of a group is the number of its children, so we are basically checking
+                    if the group has children, so if its length is greater than zero...  */
+                if (item.length > 0) {
+
+                    // we loop through all the children of the child. Now "subItem" is the child of the child
+                    item.forEach(function (subItem) {
+
+                        /*  we update its y position adding "floorGap" to it.
+                            let's make a small recap:
+                            * during the tween we moved gameGroup down by floorGap pixels
+                            * at the end of the tween we moved gameGroup back to its default y position (zero), that is up by floorGap pixels
+                            * finally we move down each gameGroup child by floorGap pixels
+                            the final result is we have all gameGroups children in the same position as if gameGroup would have moved,
+                            but with gameGroup at its starting position.
+                            This fakes the infinite scrolling effect  */
+                        subItem.y += this.gameOptions.floorGap;
+
+                        /*  now we check if the item y coordinate is greater than the game height, that is it left the screen to the bottom
+                            and we have to remove it  */
+                        if (subItem.y > this.game.height) {
+
+                            /*  different things to do according to item key (the key we gave to the image at preload time)
+                                each of the methods you'll see here will remove in some way - we'll see how - the item  */
+                            switch (subItem.key) {
+                                case "floor":
+
+                                    // removing the floor
+                                    this.killFloor(subItem);
+                                    break;
+                                case "ladder":
+
+                                    // removing the ladder
+                                    this.killLadder(subItem);
+                                    break;
+                                case "coin":
+
+                                    // removing the coin
+                                    this.killCoin(subItem);
+                                    break;
+                                case "spike":
+
+                                    // removing the spike
+                                    this.killSpike(subItem);
+                                    break;
+                                case "fire":
+
+                                    // removing the fire
+                                    this.killFire(subItem);
+                                    break;
+                                case "arrow":
+
+                                    // removing the arrow
+                                    this.killArrow(subItem);
+                                    break;
+                                case "monster":
+
+                                    // removing the monster
+                                    this.killMonster(subItem);
+                                    break;
+                                case "spikedmonster":
+
+                                    // removing the spiked monster
+                                    this.killSpikedMonster(subItem);
+                                    break;
+                            }
+                        }
+                    }, this);
+                } else {
+
+                    // if the item has length equal to zero, that is has not children, move it down by "floorGap"
+                    item.y += this.gameOptions.floorGap;
+                }
+            }, this);
+
+            // this method will populate the floor with enemies
+            this.populateFloor(true);
+
+            // if we have more tweens to go...
+            if (this.tweensToGo > 0) {
+
+                // decrease tweens to go...
+                this.tweensToGo--;
+
+                // ...and start the tween
+                this.scrollTween.start();
+            }
+        }, this);
+    }
+    // method to draw the level, that is the entire game with all floors
+    drawLevel() {
+
+        // creation of a local variable which keep tracks of current floor
+        var currentFloor = 0;
+
+        /*  we are keeping track of the vertical coordinate of highest floor placed so far.
+            since we just started to place floors, the first floor is placed at floorStart  */
+        this.highestFloorY = this.game.height * this.gameOptions.floorStart;
+
+        /*  this loop will keep on placing floors above the starting floor.
+            each floor will be placed floorGap pixels above the previous
+            floor until we reach - 2 * this.gameOptions.floorGap height, that is we placed
+            two floors higher than the very top of the canvas  */
+
+        while (this.highestFloorY > -2 * this.gameOptions.floorGap) {
+
+            /*  populateFloor method will populate the floor with coins, ladders and enemies.
+                it features a Boolean argument which is true if currentFloor is bigger than zero (it's not the first floor),
+                false otherwise  */
+            this.populateFloor(currentFloor > 0);
+
+            // at this time we added a floor, so it's time to update highestFloorY value
+            this.highestFloorY -= this.gameOptions.floorGap;
+
+            // increasing currentFloor counter
+            currentFloor++;
+        }
+
+        /*  we have to add floorGap to highestFloorY because a few lines before
+            we updated the value of highestFloorY because we were going to add another floor,
+            but once the condition of the while loop is not satisfied anymore, we
+            find ourselves with an highestFloorY value which does not reflect aymore the
+            actual position of the highest floor, and that's why we update it now  */
+        this.highestFloorY += this.gameOptions.floorGap;
+
+        // this method will add the hero to the game
+        this.addHero();
+    }
+
+    // method to populate a floor, with a Boolean argument telling us if we also have to add stuff
+    populateFloor(addStuff) {
+
+        // first, we call addFloor method which will add the floor itself
+        this.addFloor();
+
+        /*  this is where addStuff comes into play.
+            at the moment we only added the floor, do we have to add other stuff?
+            if addStuff is true, that means the floor we are currently processing
+            is not the first floor, then
+            proceed adding more stuff to the floor  */
+        if (addStuff) {
+
+            /*  when you randomly add stuff and enemies to a game, one of the biggest problems
+                you will face is your level could be too hard or even impossible to play.
+                this is why I am using a safeZone array to define safe zones in which cannot be
+                placed enemies, like ladder surroundings.
+                this is the best way to create an empty array or reset an existing array to an empty one  */
+            this.safeZone = [];
+            this.safeZone.length = 0;
+
+            /*  addLadder method will add a ladder. Ladder should always be the first thing
+                to be added to each floor in order to keep the level easily playable  */
+            this.addLadder();
+
+            /*  this method will add a coin.
+                there is an optional argument which can be null (coin will be randomly placed)
+                or a Point (coin will be placed at a given coordinate).
+                in this case we want the coin to be randomly placed  */
+            this.addCoin(null);
+
+            /*  each floor can have 1 or 2 deadly items, I found it to be a good compromise
+                between randomness and gameplay but you are feel to populate the floors in
+                any other way.
+                integerInRange method returns a random integer between the to arguments, both included  */
+            var deadlyItems = this.game.rnd.integerInRange(1, 2);
+
+            // loop executed deadlyItems times
+            for (var i = 0; i < deadlyItems; i++) {
+
+                /*  randomly selecting the deadly stuff to add, again you are free to populate floors
+                    in any other way, use as reference:
+                    * 0: spike
+                    * 1: fire
+                    * 2: arrow
+                    * 3: monster which can be killed and transformed into a coin
+                    * 4: monster which cannot be killed  */
+                var stuffToAdd = this.game.rnd.integerInRange(0, 4);
+
+                // which deadly item are we going to add?
+                switch (stuffToAdd) {
+                    case 0:
+
+                        // addSpike method  will add a spike
+                        this.addSpike();
+                        break;
+                    case 1:
+
+                        // addFire method will add the fire
+                        this.addFire();
+                        break;
+                    case 2:
+
+                        // addArrow method will add an arrow
+                        this.addArrow();
+                        break;
+                    case 3:
+
+                        // addMonster method will add a killable monster
+                        this.addMonster();
+                        break;
+                    case 4:
+
+                        // addSpikedMonster method will add a monster which can't be killed
+                        this.addSpikedMonster();
+                        break;
+                }
+            }
+        }
+    }
+
+    // method to add a floor
+    addFloor() {
+
+        // first, we see if we already have a floor sprite in the pool
+        if (this.floorPool.length > 0) {
+
+            // if we find a floor in the pool, let's remove it from the pool
+            let floor = this.floorPool.pop();
+
+            // placing the floor at the vertical highest floor position allowed in the game
+            floor.y = this.highestFloorY;
+
+            // make the floor revive, setting its "alive", "exists" and "visible" properties all set to true
+            floor.revive();
+        }
+
+        // this is the case we did not find any floor in the pool
+        else {
+
+                // adding the floor sprite
+                let floor = this.game.add.sprite(10, this.highestFloorY, "floor");
+
+                // adding floor sprite to floor group
+                this.floorGroup.add(floor);
+
+                // enabling ARCADE physics to the floor
+                this.game.physics.enable(floor, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+                /*  setting floor body to immovable.
+                    an immovable Body will not receive any impacts from other bodies  */
+                floor.body.immovable = true;
+
+                /*  setting the checkCollision properties to control which directions collision is processed for the floor.
+                    in this case collision on the bottom side is not processed, turning the body into a "cloud".
+                    you can pass it from bottom to top but it won't let you fall when you walk over it  */
+                floor.body.checkCollision.down = false;
+            }
+    }
+
+    // method to add a ladder
+    addLadder() {
+
+        // ladderXPosition is the random horizontal placement of the ladder, with a 50 pixels margin from game borders
+        var ladderXPosition = this.game.rnd.integerInRange(50, this.game.width - 50);
+
+        // first, we see if we already have a ladder sprite in the pool
+        if (this.ladderPool.length > 0) {
+
+            // if we find a floor in the pool, let's remove it from the pool
+            var ladder = this.ladderPool.pop();
+
+            // placing the ladder at horizontal ladderXPosition
+            ladder.x = ladderXPosition;
+
+            // placing the ladder at the vertical highest floor position allowed in the game
+            ladder.y = this.highestFloorY;
+
+            // make the ladder revive, setting its "alive", "exists" and "visible" properties all set to true
+            ladder.revive();
+        }
+
+        // this is the case we did not find any ladder in the pool
+        else {
+
+                // adding the ladder sprite
+                var ladder = this.game.add.sprite(ladderXPosition, this.highestFloorY, "ladder");
+
+                // adding ladder to ladder group
+                this.ladderGroup.add(ladder);
+
+                // changing ladder registration point to horizontal:center and vertical:top
+                ladder.anchor.set(0.5, 0);
+
+                // enabling ARCADE physics to the floor
+                this.game.physics.enable(ladder, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+                // setting ladder's body as immovable
+                ladder.body.immovable = true;
+            }
+
+        /*  placing a ladder also means we have to prevent obstacles to be placed too close to it,
+            or the player sprite could climb a ladder just to find itself over a spike, with no
+            change to avoid it.
+            this is where safeZone array comes into play, let's add an object which defines
+            where to start and where to end  */
+        this.safeZone.push({
+            start: ladderXPosition - this.gameOptions.safeRadius,
+            end: ladderXPosition + this.gameOptions.safeRadius
+        });
+    }
+
+    // method to add an arrow
+    addArrow() {
+
+        /*  arrowX can take two values:
+            * 0 if the arrow will be placed on the left side
+            * 1 is the arrow will be placed on the right side  */
+        var arrowX = this.game.rnd.integerInRange(0, 1);
+
+        // arrowY is the vertical position where to place the arrow
+        var arrowY = this.highestFloorY - 20;
+
+        // first, we see if we already have an arrow sprite in the pool
+        if (this.arrowPool.length > 0) {
+
+            // if we find an arrow in the pool, let's remove it from the pool
+            var arrow = this.arrowPool.pop();
+
+            /*  if you recycled an arrow from the pool, probably it has been fired.
+                this means it has a velocity.
+                the best way to prevent old velocity values to interfere with new placement
+                is to call reset method which resets all body values (velocity, acceleration, rotation, etc)
+                and places it into its new position  */
+            arrow.reset(this.game.width * arrowX, arrowY);
+
+            // custom property to tell us if the arrow is firing, initially set to false
+            arrow.isFiring = false;
+
+            /*  this line will just flip the arrow horizontally if it's on the right side of the this.game.
+                you can flip horizontally a sprite by setting its x scale to -1  */
+            arrow.scale.x = 1 - 2 * arrowX;
+
+            // make the arrow revive, setting its "alive", "exists" and "visible" properties all set to true
+            arrow.revive();
+        }
+
+        // this is the case we did not find any arrow in the pool
+        else {
+
+                // adding the ladder sprite
+                var arrow = this.game.add.sprite(this.game.width * arrowX, arrowY, "arrow");
+
+                // custom property to tell us if the arrow is firing, initially set to false
+                arrow.isFiring = false;
+
+                // setting arrow registration point to center both horizontally and vertically
+                arrow.anchor.set(0.5);
+
+                /*  this line will just flip the arrow horizontally if it's on the right side of the game.
+                    you can flip horizontally a sprite by setting its x scale to -1  */
+                arrow.scale.x = 1 - 2 * arrowX;
+
+                // enabling ARCADE physics to the arrow
+                this.game.physics.enable(arrow, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+                // setting arrow's body as immovable
+                arrow.body.immovable = true;
+
+                // adding arrow to arrow group
+                this.arrowGroup.add(arrow);
+            }
+    }
+    // method to add a monster
+    addMonster() {
+
+        // monsterX is the random horizontal placement of the monster, with a 50 pixels margin from game borders
+        var monsterX = this.game.rnd.integerInRange(50, this.game.width - 50);
+
+        // monsterY is the vertical position where to place the monster
+        var monsterY = this.highestFloorY - 20;
+
+        // first, we see if we already have a monster sprite in the pool
+        if (this.monsterPool.length > 0) {
+
+            // if we find a monster in the pool, let's remove it from the pool
+            var monster = this.monsterPool.pop();
+
+            // setting monster x coordinate
+            monster.x = monsterX;
+
+            // setting monster y coordinate
+            monster.y = monsterY;
+
+            // make the monster revive, setting its "alive", "exists" and "visible" properties all set to true
+            monster.revive();
+        }
+
+        // this is the case we did not find any monster in the pool
+        else {
+
+                // adding the monster sprite
+                var monster = this.game.add.sprite(monsterX, monsterY, "monster");
+
+                // setting monster registration point to center both horizontally and vertically
+                monster.anchor.set(0.5);
+
+                // enabling ARCADE physics to the monster
+                this.game.physics.enable(monster, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+                // setting monster's body as immovable
+                monster.body.immovable = true;
+
+                /*  an ARCADE physics body can be set to collide against the world bounds automatically
+                    and rebound back into the world if collideWorldBounds property is set to true  */
+                monster.body.collideWorldBounds = true;
+
+                // setting the velocity of the monster, in pixels per second.
+                monster.body.velocity.x = this.gameOptions.monsterSpeed;
+
+                /*  we need to detect when the monster collides with the world bounds.
+                    this is why we are creating a Phaser signal which is basically a trigger which
+                    can fire callback functions like the one you are about to see  */
+                monster.body.onWorldBounds = new __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Signal();
+
+                /*  here is the callback function, called when a collision against world bounds happens,
+                    passing five arguments: sprite, up, down, left, right
+                    where "sprite" is a reference to the sprite which collided, and the other arguments
+                    are Boolean variables indicating on which side of the world the sprite collided  */
+                monster.body.onWorldBounds.add((sprite, up, down, left, right) => {
+
+                    // collision against the left bound of the game
+                    if (left) {
+
+                        // adjusting the velocity so that the sprite moves to the right
+                        sprite.body.velocity.x = this.gameOptions.monsterSpeed;
+
+                        // do not horizontally flip the sprite (the original image is with the sprite looking to the right)
+                        sprite.scale.x = 1;
+                    }
+
+                    // collision against the right bound of the game
+                    if (right) {
+
+                        // adjusting the velocity so that the sprite moves to the left
+                        sprite.body.velocity.x = -this.gameOptions.monsterSpeed;
+
+                        // horizontally flip the sprite (the original image is with the sprite looking to the right)
+                        sprite.scale.x = -1;
+                    }
+                });
+
+                // adding monster to the group of deadly objects
+                this.deadlyGroup.add(monster);
+            }
+    }
+
+    // method to add a spiked monster
+    addSpikedMonster() {
+
+        // monsterX is the random horizontal placement of the spiked monster, with a 50 pixels margin from game borders
+        var monsterX = this.game.rnd.integerInRange(50, this.game.width - 50);
+
+        // monsterY is the vertical position where to place the spiked monster
+        var monsterY = this.highestFloorY - 25;
+
+        // first, we see if we already have a spiked monster sprite in the pool
+        if (this.spikedMonsterPool.length > 0) {
+
+            // if we find a spiked monster in the pool, let's remove it from the pool
+            var monster = this.spikedMonsterPool.pop();
+
+            // setting spiked monster x coordinate
+            monster.x = monsterX;
+
+            // setting spiked monster y coordinate
+            monster.y = monsterY;
+
+            // make the spiked monster revive, setting its "alive", "exists" and "visible" properties all set to true
+            monster.revive();
+        }
+
+        // this is the case we did not find any spiked monster in the pool
+        else {
+
+                // adding the spiked monster sprite
+                var monster = this.game.add.sprite(monsterX, monsterY, "spikedmonster");
+
+                // setting spiked monster registration point to center both horizontally and vertically
+                monster.anchor.set(0.5);
+
+                // enabling ARCADE physics to the spiked monster
+                this.game.physics.enable(monster, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+                // setting spiked monster's body as immovable
+                monster.body.immovable = true;
+
+                /*  an ARCADE physics body can be set to collide against the world bounds automatically
+                    and rebound back into the world if collideWorldBounds property is set to true  */
+                monster.body.collideWorldBounds = true;
+
+                // setting the velocity of the spiked monster, in pixels per second.
+                monster.body.velocity.x = this.gameOptions.monsterSpeed;
+
+                /*  we need to detect when the spiked monster collides with the world bounds.
+                    this is why we are creating a Phaser signal which is basically a trigger which
+                    can fire callback functions like the one you are about to see  */
+                monster.body.onWorldBounds = new __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Signal();
+
+                /*  here is the callback function, called when a collision against world bounds happens,
+                    passing five arguments: sprite, up, down, left, right
+                    where "sprite" is a reference to the sprite which collided, and the other arguments
+                    are Booleans indicating on which side of the world the sprite collided  */
+                monster.body.onWorldBounds.add((sprite, up, down, left, right) => {
+
+                    // collision against the left bound of the game
+                    if (left) {
+
+                        // adjusting the velocity so that the sprite moves to the right
+                        sprite.body.velocity.x = this.gameOptions.monsterSpeed;
+
+                        // do not horizontally flip the sprite (the original image is with the sprite looking to the right)
+                        sprite.scale.x = 1;
+                    }
+
+                    // collision against the right bound of the game
+                    if (right) {
+
+                        // adjusting the velocity so that the sprite moves to the left
+                        sprite.body.velocity.x = -this.gameOptions.monsterSpeed;
+
+                        // horizontally flip the sprite (the original image is with the sprite looking to the right)
+                        sprite.scale.x = -1;
+                    }
+                });
+
+                // adding spiked monster to the group of deadly objects
+                this.deadlyGroup.add(monster);
+            }
+    }
+
+    // method to add a coin
+    addCoin(creationPoint) {
+
+        /*  coins won't appear on every floor.
+            to have a coin appear on a floor:
+            - a random integer between 0 and coinRatio (both included) must be greater than zero
+            OR
+            - creationPoint must be different than null  */
+        if (this.game.rnd.integerInRange(0, this.gameOptions.coinRatio) != 0 || creationPoint != null) {
+
+            // coinX is the random horizontal placement of the coin, with a 50 pixels margin from game borders
+            var coinX = this.game.rnd.integerInRange(50, this.game.width - 50);
+
+            // coinY is the vertical position where to place the coin, it should appear in the middle height of a floor
+            var coinY = this.highestFloorY - this.gameOptions.floorGap / 2;
+
+            // if creation point is not null, that is we have a given coordinate where to place the coin...
+            if (creationPoint != null) {
+
+                // overwrite coinX
+                coinX = creationPoint.x;
+
+                // overwrite coinY
+                coinY = creationPoint.y;
+            }
+
+            // first, we see if we already have a coin sprite in the pool
+            if (this.coinPool.length > 0) {
+
+                // if we find a coin in the pool, let's remove it from the pool
+                var coin = this.coinPool.pop();
+
+                // setting coin x coordinate
+                coin.x = coinX;
+
+                // setting coin y coordinate
+                coin.y = coinY;
+
+                // make the coin revive, setting its "alive", "exists" and "visible" properties all set to true
+                coin.revive();
+            }
+
+            // this is the case we did not find any coin in the pool
+            else {
+
+                    // adding the coin sprite
+                    var coin = this.game.add.sprite(coinX, coinY, "coin");
+
+                    /*  here comes into play Phaser animation manager.
+                        "animations.add" Adds a new animation under the given key ("rotate" in this case).
+                        now an animation has been create and it's ready to be played  */
+                    var coinAnimation = coin.animations.add("rotate");
+
+                    /*  this is how we play an animation.
+                        the three arguments represent:
+                        * the name of the animation to be played
+                        * the framerate to play the animation at, measured in frames per second
+                        * a Boolean value which tells us if the animation should be looped  */
+                    coin.animations.play("rotate", 15, true);
+
+                    // setting coin registration point to center both horizontally and vertically
+                    coin.anchor.set(0.5);
+
+                    // enabling ARCADE physics to the coin
+                    this.game.physics.enable(coin, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+                    // setting coin's body as immovable
+                    coin.body.immovable = true;
+
+                    // adding the coin to the group of coins
+                    this.coinGroup.add(coin);
+                }
+        }
+    }
+
+    // method to add a spike
+    addSpike() {
+
+        // normally we are placing one spike
+        var spikes = 1;
+
+        // but if a random integer number between zero and doubleSpikeRatio (both included) is equal to zero...
+        if (this.game.rnd.integerInRange(0, this.gameOptions.doubleSpikeRatio) == 0) {
+
+            // we will be placing two spikes
+            spikes = 2;
+        }
+
+        // exectuing this loop "spikes" times
+        for (var i = 1; i <= spikes; i++) {
+
+            /*  spikeXPosition can be a position which is considered safe (remember, we are trying to prevent
+                the creation of impossible floors) or false if we can't find a safe position in a reasonable
+                amount of retries
+                findSafePosition method does this job  */
+            var spikeXPosition = this.findSafePosition();
+
+            // setting spike y coordinate
+            var spikeYPosition = this.highestFloorY - 20;
+
+            // if we have a safe position where to place the spike...
+            if (spikeXPosition) {
+
+                // first, we see if we already have a spike sprite in the pool
+                if (this.spikePool.length > 0) {
+
+                    // if we find a spike in the pool, let's remove it from the pool
+                    var spike = this.spikePool.pop();
+
+                    // setting spike x coordinate
+                    spike.x = spikeXPosition;
+
+                    // setting spike y coordinate
+                    spike.y = spikeYPosition;
+
+                    // make the spike revive, setting its "alive", "exists" and "visible" properties all set to true
+                    spike.revive();
+                }
+
+                // this is the case we did not find any spike in the pool
+                else {
+
+                        // adding the spike sprite
+                        var spike = this.game.add.sprite(spikeXPosition, spikeYPosition, "spike");
+
+                        // changing spike registration point to horizontal:center and vertical:top
+                        spike.anchor.set(0.5, 0);
+
+                        // enabling ARCADE physics to the spike
+                        this.game.physics.enable(spike, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+                        // setting spike's body as immovable
+                        spike.body.immovable = true;
+
+                        // adding the spike to the group of deadly objects
+                        this.deadlyGroup.add(spike);
+                    }
+            }
+        }
+    }
+
+    // method to add fire
+    addFire() {
+        // normally we are placing one fireplace
+        var firePlaces = 1;
+
+        // but if a random integer number between zero and doubleSpikeRatio (both included) is equal to zero...
+        if (this.game.rnd.integerInRange(0, this.gameOptions.doubleSpikeRatio) == 0) {
+
+            // we will be placing two fires
+            firePlaces = 2;
+        }
+
+        // exectuing this loop "firePlaces" times
+        for (var i = 1; i <= firePlaces; i++) {
+
+            /*  fireXPosition can be a position which is considered safe (remember, we are trying to prevent
+                the creation of impossible floors) or false if we can't find a safe position in a reasonable
+                amount of retries
+                findSafePosition method does this job  */
+            var fireXPosition = this.findSafePosition();
+
+            // setting fire y coordinate
+            var fireYPosition = this.highestFloorY - 58;
+
+            // if we have a safe position where to place the fire...
+            if (fireXPosition) {
+
+                // first, we see if we already have a fire sprite in the pool
+                if (this.firePool.length > 0) {
+
+                    // if we find a fire in the pool, let's remove it from the pool
+                    var fire = this.firePool.pop();
+
+                    // setting fire x coordinate
+                    fire.x = fireXPosition;
+
+                    // setting fire  y coordinate
+                    fire.y = fireYPosition;
+
+                    // make the fire revive, setting its "alive", "exists" and "visible" properties all set to true
+                    fire.revive();
+                }
+
+                // this is the case we did not find any fire in the pool
+                else {
+
+                        // adding the fire sprite
+                        var fire = this.game.add.sprite(fireXPosition, fireYPosition, "fire");
+
+                        /*  here comes into play Phaser animation manager.
+                            "animations.add" Adds a new animation under the given key ("burn" in this case).
+                            now an animation has been create and it's ready to be played  */
+                        var fireAnimation = fire.animations.add("burn");
+
+                        /*  this is how we play an animation.
+                            the three arguments represent:
+                            * the name of the animation to be played
+                            * the framerate to play the animation at, measured in frames per second
+                            * a Boolean value which tells us if the animation should be looped  */
+                        fire.animations.play("burn", 15, true);
+
+                        // changing fire registration point to horizontal:center and vertical:top
+                        fire.anchor.set(0.5, 0);
+
+                        // enabling ARCADE physics to the fire
+                        this.game.physics.enable(fire, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+                        // setting fire's body as immovable
+                        fire.body.immovable = true;
+
+                        // adding the fire to the group of deadly objects
+                        this.deadlyGroup.add(fire);
+                    }
+            }
+        }
+    }
+
+    // method to find a safe position where to place a spike or a fire
+    findSafePosition() {
+
+        /*  we count how many attempts we are making to find a safe position,
+            to prevent infinite loops or excessive time to generate a floor  */
+        var attempts = 0;
+
+        // ok let's start finding the safe position
+        do {
+
+            // updating the amount of attempts
+            attempts++;
+
+            // tossing a random position, with a 150 pixels margin from game borders
+            var posX = this.game.rnd.integerInRange(150, this.game.width - 150);
+
+            /*  we exit the loop when:
+                * posX is in a safe position, determined by isSafe method
+                * it's the 10th attempt. we can say that if we did not find a safe position
+                  within 10 attempts then never mind, it probably does not exist  */
+        } while (!this.isSafe(posX) && attempts < 10);
+
+        // did we find a safe position?
+        if (this.isSafe(posX)) {
+
+            // adding the new range to safeZone array
+            this.safeZone.push({
+                start: posX - this.gameOptions.safeRadius,
+                end: posX + this.gameOptions.safeRadius
+            });
+
+            // return the position itself
+            return posX;
+        }
+
+        // if we did not find a safe position, return false
+        return false;
+    }
+
+    // method to check if a position is safe, the argument is the x coordinate
+    isSafe(n) {
+
+        // looping through all safeZone array items
+        for (var i = 0; i < this.safeZone.length; i++) {
+
+            // if the x coordinate is inside a safeZone item interval...
+            if (n > this.safeZone[i].start && n < this.safeZone[i].end) {
+
+                // ... then it's not a safe zone, return false
+                return false;
+            }
+        }
+
+        /*  if we looped through all safeZone array it means the x coordinate
+            is not inside any interval of safeZone array, return true  */
+        return true;
+    }
+
+    // method to add the hero
+    addHero() {
+
+        // adding the hero sprite
+        this.hero = this.game.add.sprite(this.game.width / 2, this.game.height * this.gameOptions.floorStart - 48, "hero");
+
+        /*  this is the method to add an animation to a sprite like you have already
+            seen when you created the animation of the coin and the fire.
+            now, the same sprite (the hero) can have more animations, that's why
+            there's a second argument which is the array of frames to be used in the animation.
+            in this case "walk" animation only takes frames 0 and 1 of the sprite sheet  */
+        this.hero.animations.add("walk", [0, 1]);
+
+        // following the same concept, "climb" animation uses frames 2 and 3
+        this.hero.animations.add("climb", [2, 3]);
+
+        // start playing "walk" animation, at 15 frames per second, in loop mode
+        this.hero.animations.play("walk", 15, true);
+
+        // adding the hero to game group
+        this.gameGroup.add(this.hero);
+
+        // setting hero registration point to horizontal: center and vertical: top
+        this.hero.anchor.set(0.5, 0);
+
+        // enabling ARCADE physics for the hero
+        this.game.physics.enable(this.hero, __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Physics.ARCADE);
+
+        // the hero will collide on world bounds
+        this.hero.body.collideWorldBounds = true;
+
+        /*  this is how we apply a local gravity to a body.
+            the hero is the only sprite in game with a gravity  */
+        this.hero.body.gravity.y = this.gameOptions.playerGravity;
+
+        // setting the velocity of the hero, in pixels per second
+        this.hero.body.velocity.x = this.gameOptions.playerSpeed;
+
+        /*  we need to detect when the hero collides with the world bounds.
+            this is why we are creating a Phaser signal which is basically a trigger which
+            can fire callback functions like the one you are about to see  */
+        this.hero.body.onWorldBounds = new __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Signal();
+
+        /*  here is the callback function, called when a collision against world bounds happens,
+            passing five arguments: sprite, up, down, left, right
+            where "sprite" is a reference to the sprite which collided, and the other arguments
+            are Boolean variables indicating on which side of the world the sprite collided  */
+        this.hero.body.onWorldBounds.add(function (sprite, up, down, left, right) {
+
+            // collision against the left bound of the game
+            if (left) {
+
+                // adjusting the velocity so that the sprite moves to the right
+                this.hero.body.velocity.x = this.gameOptions.playerSpeed;
+
+                // do not horizontally flip the sprite (the original image is with the sprite looking to the right)
+                this.hero.scale.x = 1;
+            }
+
+            // collision against the right bound of the game
+            if (right) {
+
+                // adjusting the velocity so that the sprite moves to the left
+                this.hero.body.velocity.x = -this.gameOptions.playerSpeed;
+
+                // horizontally flip the sprite (the original image is with the sprite looking to the right)
+                this.hero.scale.x = -1;
+            }
+
+            // collision against the bottom bound of the game
+            if (down) {
+
+                /* the setItem() method of the Storage interface, when passed a key name and value,
+                    will add that key to the storage, or update that key's value if it already exists.
+                    basically we are updating the best score and the total amount of coins gathered  */
+                localStorage.setItem(this.gameOptions.localStorageName, JSON.stringify({
+
+                    // score takes the highest value between currently saved score and the amount of floors climbed
+                    score: Math.max(this.reachedFloor, this.savedData.score),
+
+                    // collected coins are added to previoulsy saved coins
+                    coins: this.collectedCoins + this.savedData.coins
+                }));
+
+                // and finally the game restarts. yes, when you touch the bottom bound of the game it's game over
+                this.game.state.start("Game");
+            }
+        }, this);
+    }
+
+    // this method handles player input
+    handleTap() {
+
+        // if menu is still in the game...
+        if (this.menuGroup != null) {
+
+            // then remove it
+            this.menuGroup.destroy();
+        }
+
+        /*  the hero can jump when:
+            * the hero is not already jumping
+            AND
+            * the hero is not climbing a ladder
+            AND
+            * it's not game over  */
+        if (this.canJump && !this.isClimbing && !this.gameOver) {
+
+            /*  applying a vertical velocity to the hero.
+                this would make the hero move up forever, but thanks to
+                gravity, it will act just like a jump  */
+            this.hero.body.velocity.y = -this.gameOptions.playerJump;
+
+            // playing jump sound
+            this.jumpSound.play();
+
+            // the hero now is jumping so at the moment it cannot jump again
+            this.canJump = false;
+        }
+    }
+
+    update() {
+        // if it's not game over...
+        if (!this.gameOver) {
+
+            // method to fire an arrow
+            this.fireArrow();
+
+            // method to check for hero Vs floor collision
+            this.checkFloorCollision();
+
+            // method to check for hero Vs ladder collision
+            this.checkLadderCollision();
+
+            // method to check for hero Vs coin collision
+            this.checkCoinCollision();
+
+            // method to chech for hero Vs deadly enemies collision
+            this.checkDeadlyCollision();
+
+            // method to check for hero Vs arrow collision
+            this.checkArrowCollision();
+        }
+    }
+
+    landed(player, ground) {
+        // console.log('landed')
+    }
+
+    createOnscreenControls() {}
+
+    // this method will fire an arrow
+    fireArrow() {
+
+        // now we loop through all arrowGroup children executing the function having "item" argument = the arrow child of the group
+        this.arrowGroup.forEach(function (item) {
+
+            // we check if the arrow has about the same vertical position as the hero
+            if (Math.abs(item.y - this.hero.y) < 10) {
+
+                // is the arrow already firing?
+                if (!item.isFiring) {
+
+                    /*  if the arrow is not firing, we add a timer.
+                        a timer is a way to create and manage timer events that wait for a specific duration and then run a callback.
+                        this is how we add a simple timer event:
+                        the first argument is the delay to wait - in milliseconds - before the event is fired
+                        the second argument is the callback function to be executed  */
+                    game.time.events.add(game.rnd.integerInRange(500, 1500), function () {
+
+                        // giving arrow body a x velocity keeping an eye on arrow scale which changes according to arrow direction
+                        item.body.velocity.x = this.gameOptions.arrowSpeed * item.scale.x;
+                    }, this);
+
+                    // ok, now the arrow is firing
+                    item.isFiring = true;
+                }
+                return;
+            }
+        }, this);
+    }
+
+    // this method checks for collision between hero and floors
+    checkFloorCollision() {
+
+        /*  collide method checks for collision between two game objects, defined in the first and second parameter.
+            as you can see, you can perform collision checking between a sprite and a group.
+            the 3rd argument is a an optional callback function that is called when the objects collide.
+            there's also another callback function - in this case set to null - which lets you perform
+            additional checks against the two objects if they overlap, executing the function in the 3rd argument
+            only if the callback returns true.
+            we wont' use this feature in the game, so basically this function means:
+            "execute the callback function when the hero collides with floorGroup"  */
+        game.physics.arcade.collide(this.hero, this.floorGroup, function () {
+
+            // if the hero collided with a floor, it can jump again
+            this.canJump = true;
+        }, null, this);
+    }
+
+    // this method checks for collision between hero and ladders
+    checkLadderCollision() {
+
+        // if the hero is not climbing...
+        if (!this.isClimbing) {
+
+            /*  with the same concepts applied on collide method,
+                overlap method checks for overlap between two game objects.
+                arguments work in the same way as collide method, just have a look at
+                callback function arguments: they are the two objects which caused the
+                function to be fired  */
+            game.physics.arcade.overlap(this.hero, this.ladderGroup, function (player, ladder) {
+
+                /*  checking if the hero is within a 10 pixels radius from the ladder,
+                    we will climb it if it's true  */
+                if (Math.abs(player.x - ladder.x) < 10) {
+
+                    // saving the ladder we are going to climb into ladderToClimb property
+                    this.ladderToClimb = ladder;
+
+                    // stop moving the hero horizontally
+                    this.hero.body.velocity.x = 0;
+
+                    // moving the hero vertically, up at climbSpeed pixels/second
+                    this.hero.body.velocity.y = -this.gameOptions.climbSpeed;
+
+                    // stop applying gravity to the hero, to avoid climb speed to decrease
+                    this.hero.body.gravity.y = 0;
+
+                    // the hero is climbing
+                    this.isClimbing = true;
+
+                    // playing "climb" animation, at 15 frames per second in loop mode
+                    this.hero.animations.play("climb", 15, true);
+
+                    /*  there's something to say about these lines, as they are very important to make
+                        the game run smoothly.
+                        each time the player climbs a ladder, the whole world scrolls down to fake the
+                        "endless running" feeling: you aren't climbing, it's the whole world which scrolls down.
+                        we scroll the world with a tween. a tween takes time. what if you clikb a ladder,
+                        the world scrolls with a tween BUT before the tween ends the hero climbs another ladder?
+                        we have to keep track of how many tweens we have to go.
+                        the first thing to check is: is there a scrollTween instance already running?  */
+                    if (this.scrollTween.isRunning) {
+
+                        // in this case don't do anything, just update tweensToGo
+                        this.tweensToGo++;
+                    } else {
+
+                        // if we don't have scrollTween already running, then start it
+                        this.scrollTween.start();
+                    }
+                }
+            }, null, this);
+        }
+
+        // this is the case the hero is already climbing
+        else {
+
+                // we are checking hero y position to see if the hero completely climbed the stair
+                if (this.hero.y < this.ladderToClimb.y - 40) {
+
+                    // restoring player gravity
+                    this.hero.body.gravity.y = this.gameOptions.playerGravity;
+
+                    // restoring player horizontal speed
+                    this.hero.body.velocity.x = this.gameOptions.playerSpeed * this.hero.scale.x;
+
+                    // setting player vertical speed to zero - no more climbing
+                    this.hero.body.velocity.y = 0;
+
+                    // the hero is not climbing now
+                    this.isClimbing = false;
+
+                    // let's start play "walk" animation again
+                    this.hero.animations.play("walk", 15, true);
+
+                    // updating reachedFloor property as we climbed one more floor
+                    this.reachedFloor++;
+
+                    // updating text property of a bitmap text will update the text it shows
+                    this.scoreText.text = this.reachedFloor.toString();
+                }
+            }
+    }
+
+    // this method checks for collision between hero and coins
+    checkCoinCollision() {
+
+        /*  with the same concepts applied on collide method,
+            overlap method checks for overlap between two game objects.
+            arguments work in the same way as collide method, just have a look at
+            callback function arguments: they are the two objects which caused the
+            function to be fired  */
+        game.physics.arcade.overlap(this.hero, this.coinGroup, function (player, coin) {
+
+            // placing particle emitter in the same x coordinate of the coin
+            this.emitter.x = coin.x;
+
+            // placing particle emitter in the same y coordinate of the coin
+            this.emitter.y = coin.y;
+
+            /*  this is how we tell a particle emitter to start, let's have a look
+                at the arguments:
+                * Boolean variable to tell the emitter whether the particles
+                  should all burst out at once (true) or at the frequency given (false).
+                  setting it to true will create an explosion
+                * how long each particle lives once emitted, in milliseconds
+                * how often to emit a particle, not used in case of explosion
+                * how many particles to launch  */
+            this.emitter.start(true, 1000, null, 20);
+
+            // increasing the amount of collected coins
+            this.collectedCoins++;
+
+            // calling killCoin method which will remove the coin
+            this.killCoin(coin);
+
+            // playing coin sound
+            this.coinSound.play();
+        }, null, this);
+    }
+
+    // this method checks for collision between hero and arrows
+    checkArrowCollision() {
+
+        /*  with the same concepts applied on collide method,
+            overlap method checks for overlap between two game objects.
+            arguments work in the same way as collide method, just have a look at
+            callback function arguments: they are the two objects which caused the
+            function to be fired  */
+        this.game.physics.arcade.overlap(this.hero, this.arrowGroup, function (hero, arrow) {
+
+            /*  we dont' want an arrow to be always deadly, but only once it has been fired.
+                an arrow is fired when its x velocity is greater than zero, so this is the
+                check we are going to perform before killing the hero  */
+            if (arrow.body.velocity.x != 0) {
+
+                /*  the hero has been hit by an arrow, it's game over, managed by
+                    prepareToGameOver method  */
+                this.prepareToGameOver();
+            }
+        }, null, this);
+    }
+
+    // this method checks for collision between hero and deadly objects
+    checkDeadlyCollision() {
+
+        /*  collide method checks for collision between two game objects, defined in the first and second parameter.
+            as you can see, you can perform collision checking between a sprite and a group.
+            the 3rd argument is a an optional callback function that is called when the objects collide.
+            there's also another callback function - in this case set to null - which lets you perform
+            additional checks against the two objects if they overlap, executing the function in the 3rd argument
+            only if the callback returns true.
+            we wont' use this feature in the game, so basically this function means:
+            "execute the callback function when the hero collides with any object in deadlyGroup".
+            the two arguments represent the objects which fired the callback  */
+        game.physics.arcade.collide(this.hero, this.deadlyGroup, function (hero, deadly) {
+
+            /*  a collision against a deadly object immediately leads to game over unless it's
+                against a killable monster. we can determine which kind of object collided with
+                the hero by looking at its key property  */
+            if (deadly.key != "monster") {
+
+                /*  the hero has been hit by something deadly, it's game over, managed by
+                    prepareToGameOver method  */
+                this.prepareToGameOver();
+            }
+
+            /*  this is the case the hero collided with a killable monster.
+                let's see if the monster can be killed  */
+            else {
+
+                    /*  ARCADE body objects are populated with Boolean values when the body collides with another.
+                        these Bookean values are up, down, left and right and are placed inside touching property.
+                        true means the collision happened on that side.
+                        in this case we want the deadly body to be touched up and the hero to be touched down,
+                        this means the hero jumped on enemy's head  */
+                    if (deadly.body.touching.up && hero.body.touching.down) {
+
+                        // making the player jump again, making it bounce over enemy's head
+                        this.hero.body.velocity.y = -this.gameOptions.playerJump;
+
+                        // playing jump sound
+                        this.jumpSound.play();
+
+                        // we are adding a coin at monster's position to reward the hero which bravely killed a monster
+                        this.addCoin(deadly.position);
+
+                        // removing the monster
+                        this.killMonster(deadly);
+                    } else {
+
+                        /*  the hero did not jump on monster's head, it's game over, managed by
+                            prepareToGameOver method  */
+                        this.prepareToGameOver();
+                    }
+                }
+        }, null, this);
+    }
+
+    // this method is called when the game is over
+    prepareToGameOver() {
+
+        // yes, it's game over
+        this.gameOver = true;
+
+        // playing hurt sound. losing a game hurts.
+        this.hurtSound.play();
+
+        // applying a random horizontal velocity to the player
+        this.hero.body.velocity.x = game.rnd.integerInRange(-20, 20);
+
+        /*  making the player jump. this way the player will jump in a random direction
+            giving emphasis to the death  */
+        this.hero.body.velocity.y = -this.gameOptions.playerJump;
+
+        /*  setting player gravity to its default value, just in case death happened
+            on a ladder, where the player has no gravity  */
+        this.hero.body.gravity.y = this.gameOptions.playerGravity;
+    }
+
+    // method to remove a floor
+    killFloor(floor) {
+
+        /*  kill methos kills a a game objects, setting its "alive", "exists" and "visible" properties to false.
+            killing a game object is a way to quickly recycle it in an object pool, like we are going to do  */
+        floor.kill();
+
+        // inserting floor sprite into floor pool by adding it into floorPool array
+        this.floorPool.push(floor);
+    }
+
+    // method to remove a ladder
+    killLadder(ladder) {
+
+        // killing the ladder
+        ladder.kill();
+
+        // inserting ladder sprite into ladder pool by adding it into ladderPool array
+        this.ladderPool.push(ladder);
+    }
+
+    // method to remove a coin
+    killCoin(coin) {
+
+        // killing the coin
+        coin.kill();
+
+        // inserting coin sprite into coin pool by adding it into coinPool array
+        this.coinPool.push(coin);
+    }
+
+    // method to remove a spike
+    killSpike(spike) {
+
+        // killing the spike
+        spike.kill();
+
+        // inserting spike sprite into spike pool by adding it into spikePool array
+        this.spikePool.push(spike);
+    }
+
+    // method to remove a fire
+    killFire(fire) {
+
+        // killing the fire
+        fire.kill();
+
+        // inserting fire sprite into fire pool by adding it into firePool array
+        this.firePool.push(fire);
+    }
+
+    // method to remove an arrow
+    killArrow(arrow) {
+
+        // killing the arrow
+        arrow.kill();
+
+        // inserting arrow sprite into arrow pool by adding it into arrowPool array
+        this.arrowPool.push(arrow);
+    }
+
+    // method to remove a monster
+    killMonster(monster) {
+
+        // killing the monster
+        monster.kill();
+
+        // inserting monster sprite into monster pool by adding it into monsterPool array
+        this.monsterPool.push(monster);
+    }
+
+    // method to remove a spiked monster
+    killSpikedMonster(spikedMonster) {
+
+        // killing the spiked monster
+        spikedMonster.kill();
+
+        // inserting spiked monster sprite into spiked monster pool by adding it into spikedMonsterPool array
+        this.spikedMonsterPool.push(spikedMonster);
+    }
+
+    render() {
+        if (true) {
+            // this.game.debug.spriteInfo(this.mushroom, 32, 32)
+        }
+    }
 });
 
 /***/ }),
@@ -10966,7 +12564,7 @@ const centerGameObjects = objects => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
 
 
@@ -10983,6 +12581,69 @@ const centerGameObjects = objects => {
 
 /***/ }),
 /* 342 */
+/*!*******************************!*\
+  !*** ./src/sprites/Ground.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
+
+
+/* unused harmony default export */ var _unused_webpack_default_export = (class extends __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Sprite {
+  constructor({ game, x, y, asset }) {
+    super(game, x, y, asset);
+  }
+
+  update() {}
+});
+
+/***/ }),
+/* 343 */
+/*!*********************************!*\
+  !*** ./src/sprites/Platform.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
+
+
+/* unused harmony default export */ var _unused_webpack_default_export = (class extends __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Sprite {
+  constructor({ game, x, y, asset }) {
+    super(game, x, y, asset);
+  }
+
+  update() {}
+});
+
+/***/ }),
+/* 344 */
+/*!*******************************!*\
+  !*** ./src/sprites/Player.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
+
+
+/* unused harmony default export */ var _unused_webpack_default_export = (class extends __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Sprite {
+  constructor({ game, x, y, asset, frame }) {
+    super(game, x, y, asset, frame);
+  }
+
+  update() {}
+});
+
+/***/ }),
+/* 345 */
 /*!***********************!*\
   !*** ./src/config.js ***!
   \***********************/
@@ -10992,76 +12653,9 @@ const centerGameObjects = objects => {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-  gameWidth: 360,
+  gameWidth: 800,
   gameHeight: 592,
   localStorageName: 'phaseres6webpack'
-});
-
-/***/ }),
-/* 343 */,
-/* 344 */
-/*!*******************************!*\
-  !*** ./src/sprites/Ground.js ***!
-  \*******************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
-
-
-/* harmony default export */ __webpack_exports__["a"] = (class extends __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Sprite {
-  constructor({ game, x, y, asset }) {
-    super(game, x, y, asset);
-  }
-
-  update() {}
-});
-
-/***/ }),
-/* 345 */
-/*!*********************************!*\
-  !*** ./src/sprites/Platform.js ***!
-  \*********************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
-
-
-/* harmony default export */ __webpack_exports__["a"] = (class extends __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Sprite {
-  constructor({ game, x, y, asset }) {
-    super(game, x, y, asset);
-  }
-
-  update() {}
-});
-
-/***/ }),
-/* 346 */
-/*!*******************************!*\
-  !*** ./src/sprites/Player.js ***!
-  \*******************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser__ = __webpack_require__(/*! phaser */ 46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_phaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_phaser__);
-
-
-/* harmony default export */ __webpack_exports__["a"] = (class extends __WEBPACK_IMPORTED_MODULE_0_phaser___default.a.Sprite {
-  constructor({ game, x, y, asset, frame }) {
-    super(game, x, y, asset, frame);
-  }
-
-  update() {}
 });
 
 /***/ })
