@@ -61,7 +61,7 @@ export default class extends Phaser.State {
       
           /*  the name of the variable where to save game information into local storage. It's a string.
               changing the string will also reset game information  */
-          localStorageName: "ladderzGame",
+          localStorageName: "hiphophomieprojects",
       
           // version of the game. Just in case you need to display it somewhere
           versionNumber: "1.0",
@@ -1610,7 +1610,8 @@ addAudio () {
     
         // this method is called when the game is over
         prepareToGameOver (){
-    
+            // we need to pause the screen here
+            
             // yes, it's game over
             this.gameOver = true;
     

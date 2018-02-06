@@ -32,13 +32,13 @@ module.exports = {
     definePlugin,
     new CleanWebpackPlugin(['www']),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new webpack.optimize.UglifyJsPlugin({
-      drop_console: true,
-      minimize: true,
-      output: {
-        comments: false
-      }
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   drop_console: true,
+    //   minimize: true,
+    //   output: {
+    //     comments: false
+    //   }
+    // }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor'/* chunkName= */, filename: 'vendor.bundle.js'/* filename= */}),
     new CopyWebpackPlugin([
       {
@@ -58,7 +58,7 @@ module.exports = {
         collapseWhitespace: true,
         html5: true,
         minifyCSS: true,
-        minifyJS: true,
+        minifyJS: false,
         minifyURLs: true,
         removeComments: true,
         removeEmptyAttributes: true

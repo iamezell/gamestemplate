@@ -10612,7 +10612,7 @@ class Game extends __WEBPACK_IMPORTED_MODULE_2_phaser___default.a.Game {
     this.state.add('Splash', __WEBPACK_IMPORTED_MODULE_4__states_Splash__["a" /* default */], false);
     this.state.add('Game', __WEBPACK_IMPORTED_MODULE_5__states_Game__["a" /* default */], false);
 
-    // with Cordova with need to wait that the device is ready so we will call the Boot state in another file
+    // with Cordov8a with need to wait that the device is ready so we will call the Boot state in another file
     if (!window.cordova) {
       this.state.start('Boot');
     }
@@ -10907,7 +10907,7 @@ const centerGameObjects = objects => {
 
             /*  the name of the variable where to save game information into local storage. It's a string.
                 changing the string will also reset game information  */
-            localStorageName: "ladderzGame",
+            localStorageName: "hiphophomieprojects",
 
             // version of the game. Just in case you need to display it somewhere
             versionNumber: "1.0",
@@ -12448,6 +12448,7 @@ const centerGameObjects = objects => {
 
     // this method is called when the game is over
     prepareToGameOver() {
+        // we need to pause the screen here
 
         // yes, it's game over
         this.gameOver = true;
@@ -12655,7 +12656,7 @@ const centerGameObjects = objects => {
 /* harmony default export */ __webpack_exports__["a"] = ({
   gameWidth: 800,
   gameHeight: 592,
-  localStorageName: 'phaseres6webpack'
+  localStorageName: 'hiphophomieprojects'
 });
 
 /***/ })
